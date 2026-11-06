@@ -51,3 +51,8 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - styles.css (copied from the budget app) sets body text to `'Budget Digits', 'DM Sans'`. "Budget Digits" is Plus Jakarta limited to numerals, so dates like "Nov 1" mixed two fonts. tracker.css now sets `body` to plain DM Sans, like Bill Calendar. Headings and summary-card numbers still use Plus Jakarta explicitly.
 - In task rows, priority badge, due date and status are all 13px (date weight 500, badge 600).
+
+### 2026-11-06: Status colours match the summary cards (edited in Claude Code)
+
+- Task chips are coloured by status with the same tokens as the summary cards: to do `--sky`, in progress `--butter` (new class `is-progress`; not `progress`, which is the progress-bar class in styles.css), completed `--mint` (struck through), overdue `--blush` (overdue wins over in progress). Applies to month cells (`.cal-task`), week rows and the phone day panel (`.week-task`), and the Today card (`.today-item`). Previously done tasks were pink and in-progress tasks looked like to-do ones.
+- A colour key (`.status-legend`: To do, In progress, Completed, Overdue) sits under the month grid and the week list, like Bill Calendar's legend. On phones it fits on one line.
