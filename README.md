@@ -41,4 +41,4 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 ### 2026-11-05: Smaller summary cards (edited in Claude Code)
 
-- The summary cards felt too large at Bill Calendar's size, so they are now compact with the same fonts: label 13px, value 22px, padding 12px 16px (about 68px tall instead of 103px). On phones all four sit in one row: label 11px, value 20px, padding 8px 9px, about 60px tall. The rule is the last block in tracker.css and overrides the earlier "Summary cards, matching Bill Calendar" block.
+- On desktop the summary cards felt too large at Bill Calendar's size, so on screens wider than 700px they are compact with the same fonts: label 13px, value 22px, padding 12px 16px (about 77px tall instead of 103px). Phones keep Bill Calendar's 2x2 cards exactly (label 14px, value 1.6rem, padding 14px, about 93px tall). The compact rule is the last block in tracker.css, wrapped in `@media(min-width:701px)`.
