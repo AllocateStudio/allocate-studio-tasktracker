@@ -38,4 +38,4 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(max-width:650px){.today-head{align-items:flex-start;flex-direction:column}}
 
 /* Checkbox tick: keep the original ✓ glyph, centred in the square */
-.check{display:grid;place-items:center;line-height:1;padding:1.3px 2.6px 0 0}
+.check{display:grid;place-items:center;line-height:1;padding:1.3px 0.6px 0 0}
