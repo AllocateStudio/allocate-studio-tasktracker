@@ -46,3 +46,8 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-06: Column headings in the task list (edited in Claude Code)
 
 - "Your tasks" now has a heading row (`.task-head`) above the rows: Task, Priority, Due date, Status. It uses the same grid columns as `.task-row`, so each heading sits exactly over its column. It is added in `list()` only when there are tasks, and hidden on phones (700px and narrower), where rows show only the checkbox, title and menu.
+
+### 2026-11-06: One font for text and numbers (edited in Claude Code)
+
+- styles.css (copied from the budget app) sets body text to `'Budget Digits', 'DM Sans'`. "Budget Digits" is Plus Jakarta limited to numerals, so dates like "Nov 1" mixed two fonts. tracker.css now sets `body` to plain DM Sans, like Bill Calendar. Headings and summary-card numbers still use Plus Jakarta explicitly.
+- In task rows, priority badge, due date and status are all 13px (date weight 500, badge 600).
