@@ -30,3 +30,11 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Fixed the save indicator: a failed browser-storage write now remains visible after rendering or changing views; a successful retry clears it.
 - Simplified the Today empty-state text, keeping decorative captions removed.
 - Verified JavaScript syntax and mocked-DOM behavior for overdue tasks across months, Today priority ordering, completed/future task exclusion, completion, seven-day Week view, week navigation, task dialogs, storage failure, and recovery. No new visual browser verification was performed in this review.
+
+### 2026-11-05: Month view on phones (edited in Claude Code)
+
+- On screens 700px and narrower, the Month calendar shows each task as a short chip inside the day: title wrapped to two lines with an ellipsis, at most two chips per day, then "+N" (`.cal-more`). Chip colour shows status: blue to do, pink overdue (`.cal-task.late`), green and struck through when done (the ✓ is hidden on phones via `.cal-check`). Cells are taller (96px) with tighter padding so more text fits.
+- Tapping a task chip opens it. Tapping elsewhere in a day selects that day (pink date, ink border) and shows all of its tasks below the calendar in a day panel (`dayPanel()` in app.js, `selectedDay` state, ＋ Add button). On load the selected day is today, or the 1st if another month is shown.
+- Desktop Month view is unchanged: titles in cells, clicking a day adds a task. The phone check is `phone()` (matchMedia max-width 700px) in the click handler.
+- Checked in a browser at phone and desktop widths.
+
