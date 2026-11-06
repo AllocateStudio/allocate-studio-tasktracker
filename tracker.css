@@ -25,3 +25,14 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 
 /* Overdue chips: dark ink text on the pink background (the generic .late red was hard to read) */
 .cal-task.late,.week-task.late,.week-task.late *,.today-item.late .today-open,.today-item.late .today-open *{color:var(--ink)}
+
+/* Today card head: date next to the title, counts as coloured pills (replaces the "date · N due today · N overdue" line) */
+.today-head{flex-wrap:wrap;gap:10px 16px}
+.today-head h2{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.today-date{font:500 14px 'DM Sans',Arial,sans-serif;letter-spacing:0;color:var(--muted)}
+.today-counts{display:flex;gap:8px;flex-wrap:wrap}
+.today-count{display:inline-flex;align-items:baseline;gap:5px;padding:5px 12px;border:1.5px solid var(--ink);border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.today-count b{font:800 16px 'DM Sans',Arial,sans-serif}
+.today-count.is-due{background:var(--accent)}
+.today-count.is-late{background:var(--blush)}
+@media(max-width:650px){.today-head{align-items:flex-start;flex-direction:column}}

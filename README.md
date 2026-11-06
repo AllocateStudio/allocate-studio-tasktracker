@@ -16,6 +16,10 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Today card head redesign (edited in Claude Code)
+
+- Today card head: the line "Friday, Nov 6 · 3 due today · 7 overdue" and the big total number are replaced by the date next to the "Today" title plus two outlined pills: lime "N due today" and pink "N overdue" (the overdue pill is hidden when there are none). app.js `todayCard()`, classes `today-date`, `today-counts`, `today-count is-due/is-late`; styles in the last tracker.css block. On phones the pills sit under the title.
+
 ### 2026-11-06: Readable overdue chips (edited in Claude Code)
 
 - 2026-11-06: Overdue chips in Month, Week and Today now use dark ink text on the pink background. The generic red `.late` colour was hard to read there (tracker.css, last block).
