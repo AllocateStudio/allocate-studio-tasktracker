@@ -18,7 +18,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 ### 2026-11-06: Centred checkbox tick (edited in Claude Code)
 
-- The tick in a completed task's checkbox is now drawn with CSS (`.check[aria-pressed="true"]::after`, a rotated L) and sits exactly in the centre. The "✓" character is still in the markup but hidden with `font-size:0`. Styles in the last tracker.css block.
+- The tick in a completed task's checkbox is the original "✓" glyph, now centred in the square: `.check` uses `display:grid;place-items:center` plus padding `1.3px 2.6px 0 0` to offset the glyph's own off-centre ink (measured: ink centre now 12.5×12.5 in the 25px box). A CSS-drawn tick was tried first and reverted at the owner's request. Styles in the last tracker.css block.
 
 ### 2026-11-06: Today card head redesign (edited in Claude Code)
 
