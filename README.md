@@ -14,6 +14,7 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 ## Change log
 
+- 2026-11-06: Overdue chips in Month, Week and Today now use dark ink text on the pink background. The generic red `.late` colour was hard to read there (tracker.css, last block).
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
 ### 2026-11-05: Style matched to Bill Calendar (edited in Claude Code)
