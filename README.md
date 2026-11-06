@@ -23,3 +23,10 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Week view on the Calendar is now a top-to-bottom list of seven day rows, like Bill Calendar, instead of seven columns. New function `weekList()` in app.js; `calendar()` calls it when `calendarMode==='Week'`. Each row (`.week-row`) shows the day name ("Thursday, Nov 5") with a ＋, then the tasks as full-width cards (`.week-task`: title, then project · priority · status), or "No tasks due". Today's row has a lime inner ring. Clicking a row adds a task on that day; clicking a task opens it for editing. Styles are at the end of tracker.css. The old `.week-grid` rules in tracker.css are no longer used.
 - Today card on the Tasks view, between the summary cards and "Your tasks". It is the app's reminder: no browser notifications, by decision. New function `todayCard()` in app.js. It lists every unfinished task that is overdue (any month, oldest first) and then those due today (High priority first), with the count on the right and a summary line ("Thursday, Nov 5 · 1 due today · 1 overdue"). The checkbox completes a task and the task opens for editing on click. Overdue items are pink with red meta text. Empty state: "Nothing due today. Enjoy the calm." Styled like Bill Calendar's "Due in the next 7 days" card; styles at the end of tracker.css.
 - All changes were checked in a browser at desktop and phone widths.
+
+### 2026-11-05: Codex review of Claude changes
+
+- Preserved the Today card, vertical Week view, pink Month/Week control, and revised card styling.
+- Fixed the save indicator: a failed browser-storage write now remains visible after rendering or changing views; a successful retry clears it.
+- Simplified the Today empty-state text, keeping decorative captions removed.
+- Verified JavaScript syntax and mocked-DOM behavior for overdue tasks across months, Today priority ordering, completed/future task exclusion, completion, seven-day Week view, week navigation, task dialogs, storage failure, and recovery. No new visual browser verification was performed in this review.
