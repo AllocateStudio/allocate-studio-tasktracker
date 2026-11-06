@@ -11,3 +11,13 @@ Data is stored locally in the browser, separately from Budget Planner and Bill C
 Design assets, fonts, palette, and month picker are copied from the existing Allocate Studio projects. The source projects were not modified.
 
 Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, sample creation, persistence, completion, search, calendar, and editing. Visual/browser verification was blocked by the preview browser's file URL policy.
+
+## Change log
+
+This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
+
+### 2026-11-05: Style matched to Bill Calendar (edited in Claude Code)
+
+- Month / Week switch on the Calendar view now uses Bill Calendar's segmented control: classes `mode-switch` and `mode-pill` (app.js, in `calendar()`), an ink outline with a shadow, and the active pill in pink `var(--blush)`. On phones (700px and narrower) it fills the full width. Styles are at the end of tracker.css. The old `.calendar-switch` rules in tracker.css are no longer used.
+- Summary cards at the top (Total tasks, In progress, Completed, Overdue) now match Bill Calendar's size and type: label in DM Sans 14px, value in Plus Jakarta Sans 800 at `clamp(1.3rem,2.6vw,2rem)`, padding 18px 20px, radius 16px, gap 14px. On phones (650px and narrower): padding 14px, value 1.6rem. This replaced the "Compact summary cards" block in tracker.css.
+- Both changes were checked in a browser at desktop and phone widths.
