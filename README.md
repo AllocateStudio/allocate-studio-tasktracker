@@ -42,3 +42,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-05: Smaller summary cards (edited in Claude Code)
 
 - On desktop the summary cards felt too large at Bill Calendar's size, so on screens wider than 700px they are compact with the same fonts: label 13px, value 22px, padding 12px 16px (about 77px tall instead of 103px). Phones keep Bill Calendar's 2x2 cards exactly (label 14px, value 1.6rem, padding 14px, about 93px tall). The compact rule is the last block in tracker.css, wrapped in `@media(min-width:701px)`.
+
+### 2026-11-06: Column headings in the task list (edited in Claude Code)
+
+- "Your tasks" now has a heading row (`.task-head`) above the rows: Task, Priority, Due date, Status. It uses the same grid columns as `.task-row`, so each heading sits exactly over its column. It is added in `list()` only when there are tasks, and hidden on phones (700px and narrower), where rows show only the checkbox, title and menu.
