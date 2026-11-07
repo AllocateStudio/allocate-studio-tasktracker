@@ -16,6 +16,10 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Quieter add buttons in Week (edited in Claude Code)
+
+- Week view: the ＋ next to each day name is hidden on devices with a mouse and appears when hovering the day row or focusing it with the keyboard (`@media(hover:hover)`). On touch screens it stays, fainter (opacity .3). Clicking a day still opens a new task for that date, as before. Month view and the phone day panel are unchanged. Last tracker.css block.
+
 ### 2026-11-06: Status pills in Your tasks (edited in Claude Code)
 
 - Priority column is now plain text (no coloured badge). The Status column is an oval pill coloured by status, with darker text in the same hue: To do sky / #2f5aa8, In progress butter / #8a6100, Done mint / #3b7524. app.js `row()` adds `st-todo|st-progress|st-done` to `.task-status`; styles in the last tracker.css block. Overdue is still shown in the Due date column. Backup: `work/app-before-status-pills.js`.

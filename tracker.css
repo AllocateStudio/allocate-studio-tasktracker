@@ -51,7 +51,17 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 
 /* Your tasks: priority is plain text; status is an oval pill in its status colour with darker text in the same hue */
 .task-row>.badge{background:none;padding:0;border-radius:0;font-weight:500;color:var(--ink)}
-.task-row>.task-status{display:inline-block;width:fit-content;padding:4px 11px;border-radius:999px;font-weight:600;white-space:nowrap}
+.task-row>.task-status{width:fit-content;padding:4px 11px;border-radius:999px;font-weight:600;white-space:nowrap}
 .task-status.st-todo{background:var(--sky);color:#2f5aa8}
 .task-status.st-progress{background:var(--butter);color:#8a6100}
 .task-status.st-done{background:var(--mint);color:#3b7524}
+
+@media(min-width:701px){.task-row>.task-status{display:inline-block}}
+/* Align the colour key with the calendar cells inside the panel. */
+.status-legend{padding-left:33.5px}
+@media(max-width:700px){.panel:has(>.calendar-grid)+.status-legend{padding-left:17.5px}.week-panel+.status-legend{padding-left:21.5px}}
+
+/* Week: the per-day ＋ appears only on hover/keyboard focus with a mouse; on touch screens it stays, but fainter */
+.week-row-label span{transition:opacity .15s}
+@media(hover:hover){.week-row-label span{opacity:0}.week-row:hover .week-row-label span,.week-row-label:focus-visible span{opacity:.6}}
+@media(hover:none){.week-row-label span{opacity:.3}}
