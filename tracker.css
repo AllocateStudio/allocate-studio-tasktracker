@@ -48,3 +48,10 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 
 /* Ticked checkbox in Today: black square, white tick (the task list keeps its pink box) */
 .today-item.done .check{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* Your tasks: priority is plain text; status is an oval pill in its status colour with darker text in the same hue */
+.task-row>.badge{background:none;padding:0;border-radius:0;font-weight:500;color:var(--ink)}
+.task-row>.task-status{display:inline-block;width:fit-content;padding:4px 11px;border-radius:999px;font-weight:600;white-space:nowrap}
+.task-status.st-todo{background:var(--sky);color:#2f5aa8}
+.task-status.st-progress{background:var(--butter);color:#8a6100}
+.task-status.st-done{background:var(--mint);color:#3b7524}
