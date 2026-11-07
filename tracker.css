@@ -33,7 +33,7 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .today-counts{display:flex;gap:8px;flex-wrap:wrap}
 .today-count{display:inline-flex;align-items:baseline;gap:5px;padding:5px 12px;border:1.5px solid var(--ink);border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
 .today-count b{font:800 16px 'DM Sans',Arial,sans-serif}
-.today-count.is-due{background:var(--sky)}
+.today-count.is-due{background:linear-gradient(115deg,var(--sky) 50%,var(--butter) 50%)}
 .today-count.is-late{background:var(--blush)}
 @media(max-width:650px){.today-head{align-items:flex-start;flex-direction:column}}
 
