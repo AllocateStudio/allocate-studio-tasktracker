@@ -112,3 +112,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Select tasks enables bulk completion, scheduling, and deletion with confirmation. Select visible respects current filters; changing filters clears selection.
 - Search includes titles, project names, notes, and subtasks within the selected month or Inbox.
 - Existing browser data and JSON backups remain compatible. Syntax and mocked-DOM tests passed, including recurrence boundaries, leap years, duplication prevention, bulk operations, and editor compatibility. Visual verification was not available.
+
+### 2026-11-07: Inbox removed (edited in Claude Code)
+
+- At the owner's request the Inbox tab is gone: navigation is Tasks, Calendar, Settings. The editor's due date is required again ("Due date", `required`), and the "No date / Inbox" quick button is removed (Tomorrow and Next week stay).
+- Safety net: any task that still has no date (from an older backup or browser data) is listed at the top of Your tasks, so it is never hidden. Overdue counts still ignore undated tasks.
+- Leftover `view==='Inbox'` branches in app.js are now unreachable and harmless. Backup: `work/app-before-remove-inbox.js`.
