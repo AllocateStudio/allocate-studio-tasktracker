@@ -98,3 +98,24 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .today-task-body{flex:1;min-width:0}.today-task-body .today-open{width:100%}.task-reschedule{margin-top:7px;font-size:12px;color:var(--ink-soft)}.task-reschedule summary{cursor:pointer;width:fit-content;font-weight:600;padding:3px 0}.reschedule-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:8px 0}.reschedule-actions button{border:1px solid var(--ink);border-radius:7px;background:var(--card);font-size:12px;padding:7px 9px;min-height:34px}.reschedule-actions label{display:flex;align-items:center;gap:7px;font-size:12px}.reschedule-actions input{font-size:12px;padding:6px;min-height:34px;max-width:150px}.week-task-body{min-width:0}.today-task-body>.task-reschedule,.week-task-body>.task-reschedule{margin-left:12px}
 
 .task-status.st-overdue{background:var(--blush);color:#922f46}
+
+/* Reschedule: Lucide "calendar-clock" icon at the right of each open task; opens a small menu. Replaces the "▸ Reschedule" rows. */
+.task-reschedule{display:none}
+.today-task-body,.week-task-body,.task-main{position:relative}
+.today-task-body .today-open,.week-task-body .week-task{padding-right:46px}
+.task-main{padding-right:40px}
+.resched{position:absolute;right:8px;top:50%;transform:translateY(-50%);z-index:2}
+.task-main>.resched{right:0}
+.resched-btn{display:grid;place-items:center;width:30px;height:30px;padding:0;border:1.5px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);cursor:pointer;transition:opacity .15s}
+.resched-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.resched-menu{display:none;position:absolute;right:0;top:calc(100% + 6px);min-width:180px;flex-direction:column;gap:2px;padding:6px;background:#fff;border:1.5px solid var(--ink);border-radius:12px;box-shadow:3px 4px 0 var(--ink);z-index:20}
+.resched.open .resched-menu{display:flex}
+.resched-menu button{border:0;background:none;text-align:left;padding:9px 10px;border-radius:7px;font:600 13px 'DM Sans',Arial,sans-serif;color:var(--ink);min-height:38px}
+.resched-menu label{display:flex;flex-direction:column;gap:5px;padding:8px 10px 6px;font:600 12px 'DM Sans',Arial,sans-serif;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:4px}
+.resched-menu input{font-size:13px;padding:6px 8px;min-height:36px}
+@media(hover:hover){.resched-menu button:hover{background:#f3f1e9}
+.resched-btn{opacity:0}
+.today-task-body:hover .resched-btn,.week-task-body:hover .resched-btn,.task-row:hover .resched-btn,.resched.open .resched-btn,.resched-btn:focus-visible{opacity:1}}
+@media(hover:none){.resched-btn{opacity:.55}.resched.open .resched-btn{opacity:1}}
+.resched.open .resched-btn{background:var(--ink);color:#fff}
+.resched.open{z-index:30}

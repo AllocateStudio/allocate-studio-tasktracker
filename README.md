@@ -118,3 +118,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - At the owner's request the Inbox tab is gone: navigation is Tasks, Calendar, Settings. The editor's due date is required again ("Due date", `required`), and the "No date / Inbox" quick button is removed (Tomorrow and Next week stay).
 - Safety net: any task that still has no date (from an older backup or browser data) is listed at the top of Your tasks, so it is never hidden. Overdue counts still ignore undated tasks.
 - Leftover `view==='Inbox'` branches in app.js are now unreachable and harmless. Backup: `work/app-before-remove-inbox.js`.
+
+### 2026-11-07: Reschedule as an icon with a small menu (edited in Claude Code)
+
+- The "▸ Reschedule" row under every task (Today, Week, Your tasks) is replaced by a small icon button at the right of each open task: Lucide `calendar-clock` (ISC licence, inlined as SVG in app.js `reschedIcon`). Clicking it opens a menu: → Tomorrow, → Next week, Pick a date. Outside click or Escape closes it.
+- With a mouse the icon appears only on hover/focus; on touch screens it is always visible but faint (opacity .55). Done tasks have no icon.
+- app.js: `quickMove()` now renders `.resched` (button `.resched-btn` + `.resched-menu`); `closeResched()` and an Escape key handler were added; the click handler toggles the menu. The existing `data-move` / `data-move-date` actions are unchanged. List rows wrap the title cell in `.task-main`. Styles in the last tracker.css block; `.task-reschedule` is now unused. index.html CSS version bumped to `20261107-resched-icon`. Backup: `work/app-before-resched-icon.js`.
