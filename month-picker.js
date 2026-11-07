@@ -34,7 +34,7 @@
   const yearAllowed = (c, y) =>
     Array.from({ length: 12 }, (_, m) => y * 12 + m).some((n) => allowed(c, n));
   const icon =
-    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v15H5zM5 10h14M8 3v5M16 3v5"/></svg>';
+    '<svg class="lucide-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg>';
   let active = null;
   window.renderMonthPicker = ({
     value,

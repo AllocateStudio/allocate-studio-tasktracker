@@ -128,3 +128,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Lucide icon in the Week picker (edited in Claude Code)
 
 - The Week range control (`weekControls()` in app.js) now uses Lucide `calendar-range` (ISC) instead of the hand-drawn calendar, matching the reschedule icon's style (class `lucide-ico`: stroke 1.8, round caps). The Month picker icon (from month-picker.js, shared with other products) is unchanged. index.html CSS version `20261107-week-icon`.
+
+### 2026-11-07: Owner's calendar-days icon in both pickers (edited in Claude Code)
+
+- The owner chose Lucide `calendar-days` (her variant: top ticks `v3`, rect at y=3, divider at y=9, two rows of dots). It replaces `calendar-range` in the Week picker (app.js `weekControls()`) and the old hand-drawn icon in the Month picker (`month-picker.js`, this product's copy only; Bill Calendar's copy is unchanged). Both use class `lucide-ico`. index.html CSS version `20261107-days-icon`.
