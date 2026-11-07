@@ -16,6 +16,10 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Month view hides the per-day ＋ (edited in Claude Code)
+
+- Month view on desktop showed a faint ＋ in every day cell (the earlier hide rule only applied on phones). Now it is hidden and appears only on the hovered day with a mouse, same as Week. Phones never show it. Clicking the day number still adds a task on that date. Last tracker.css block.
+
 ### 2026-11-06: Week range looks like the month picker (edited in Claude Code)
 
 - Week view: the separate ‹ / range / › buttons are replaced by one outlined control with the calendar icon, using the existing `.week-nav-picker` + `.mp-step` / `.mp-trigger` styles from styles.css (same look as the Month picker). The range label is not clickable; the arrows still use `data-week-step`. Today stays a separate button. On phones the picker fills the width and Today + Add task sit side by side below it. app.js `weekControls()`; last tracker.css block. Backup: `work/app-before-week-picker.js`.

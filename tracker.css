@@ -68,3 +68,8 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 
 /* Week range uses the month picker's look (.week-nav-picker from styles.css). On phones: picker on its own line, Today and Add task side by side below. */
 @media(max-width:700px){.week-controls{display:contents}.week-controls .week-nav-picker{flex:1 1 100%}.week-controls .week-nav-picker .mp-trigger{flex:1;justify-content:center}}
+
+/* Month: the per-day ＋ is hidden; with a mouse it appears only on the hovered day (same as Week). Phones never show it (a tap opens the day list). */
+.calendar-grid .day-add span{opacity:0;transition:opacity .15s}
+@media(hover:hover) and (min-width:701px){.calendar-grid .day:hover .day-add span,.calendar-grid .day-add:focus-visible span{opacity:.6}}
+@media(max-width:700px){.calendar-grid .day-add span{display:none}}
