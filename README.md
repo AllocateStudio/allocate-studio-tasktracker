@@ -100,3 +100,15 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - Task chips are coloured by status with the same tokens as the summary cards: to do `--sky`, in progress `--butter` (new class `is-progress`; not `progress`, which is the progress-bar class in styles.css), completed `--mint` (struck through), overdue `--blush` (overdue wins over in progress). Applies to month cells (`.cal-task`), week rows and the phone day panel (`.week-task`), and the Today card (`.today-item`). Previously done tasks were pink and in-progress tasks looked like to-do ones.
 - A colour key (`.status-legend`: To do, In progress, Completed, Overdue) sits under the month grid and the week list, like Bill Calendar's legend. On phones it fits on one line.
+
+
+### 2026-11-07: Task planning features
+
+- Inbox stores tasks without a date. Unscheduled tasks are excluded from overdue counts and calendar views.
+- The task editor supports Daily, Weekdays, Weekly, and Monthly repeats. Completing an occurrence creates one next occurrence; repeating an old completion does not create a duplicate. Missed dates are skipped to the next future occurrence. Monthly repeats keep their original day, clamping to the last day of shorter months. Deleting an occurrence does not delete other occurrences.
+- Subtasks have individual checkboxes and a completion count in the task list. Edit the task to manage its checklist; the next recurring occurrence starts with unchecked subtasks.
+- Tomorrow, Next week, and No date / Inbox buttons fill the editor date; Save task applies the change. The date field supports any specific date.
+- Projects are created by entering a new project name in the editor. Existing projects appear as suggestions and in the project filter.
+- Select tasks enables bulk completion, scheduling, and deletion with confirmation. Select visible respects current filters; changing filters clears selection.
+- Search includes titles, project names, notes, and subtasks within the selected month or Inbox.
+- Existing browser data and JSON backups remain compatible. Syntax and mocked-DOM tests passed, including recurrence boundaries, leap years, duplication prevention, bulk operations, and editor compatibility. Visual verification was not available.
