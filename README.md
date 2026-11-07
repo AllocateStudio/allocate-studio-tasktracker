@@ -124,3 +124,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - The "▸ Reschedule" row under every task (Today, Week, Your tasks) is replaced by a small icon button at the right of each open task: Lucide `calendar-clock` (ISC licence, inlined as SVG in app.js `reschedIcon`). Clicking it opens a menu: → Tomorrow, → Next week, Pick a date. Outside click or Escape closes it.
 - With a mouse the icon appears only on hover/focus; on touch screens it is always visible but faint (opacity .55). Done tasks have no icon.
 - app.js: `quickMove()` now renders `.resched` (button `.resched-btn` + `.resched-menu`); `closeResched()` and an Escape key handler were added; the click handler toggles the menu. The existing `data-move` / `data-move-date` actions are unchanged. List rows wrap the title cell in `.task-main`. Styles in the last tracker.css block; `.task-reschedule` is now unused. index.html CSS version bumped to `20261107-resched-icon`. Backup: `work/app-before-resched-icon.js`.
+
+### 2026-11-07: Lucide icon in the Week picker (edited in Claude Code)
+
+- The Week range control (`weekControls()` in app.js) now uses Lucide `calendar-range` (ISC) instead of the hand-drawn calendar, matching the reschedule icon's style (class `lucide-ico`: stroke 1.8, round caps). The Month picker icon (from month-picker.js, shared with other products) is unchanged. index.html CSS version `20261107-week-icon`.

@@ -119,3 +119,4 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(hover:none){.resched-btn{opacity:.55}.resched.open .resched-btn{opacity:1}}
 .resched.open .resched-btn{background:var(--ink);color:#fff}
 .resched.open{z-index:30}
+.mp-trigger svg.lucide-ico{stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
