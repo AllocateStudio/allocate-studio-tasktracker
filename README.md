@@ -16,6 +16,13 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Completed tasks stay in Today (edited in Claude Code)
+
+- Ticking a task in the Today card no longer makes it disappear. It moves to the bottom of the list, turns mint (`.today-item.done`), is struck through, shows a ticked box and the meta "Completed · Due today" or "Completed · Was due Nov 4". Unticking puts it back in its place.
+- New task field `doneOn` (YYYY-MM-DD): set when a task becomes Done via the checkbox or the edit form, removed when reopened. Today shows Done tasks whose `date` or `doneOn` is today. Tasks completed before this change have no `doneOn`, so they only appear if they are due today.
+- A mint "N done" pill joins the Today counts when there is at least one.
+- app.js: `todayCard()`, the `data-toggle` click handler, and the editor submit. Styles in the last tracker.css block. Backup: `work/app-before-today-done.js`.
+
 ### 2026-11-06: Centred checkbox tick (edited in Claude Code)
 
 - The tick in a completed task's checkbox is the original "✓" glyph, now centred in the square: `.check` uses `display:grid;place-items:center` plus padding `1.3px 0.6px 0 0`: vertically centred, and 1px right of the exact centre at the owner's request (optical balance). A CSS-drawn tick was tried first and reverted at the owner's request. Styles in the last tracker.css block.
