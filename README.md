@@ -16,6 +16,10 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Sky "due today" pill (edited in Claude Code)
+
+- The "N due today" pill in the Today card is now sky blue (`var(--sky)`, the To do colour) instead of lime, so all three counts match the task colours: sky due today, pink overdue, mint done. tracker.css `.today-count.is-due`.
+
 ### 2026-11-06: Black ticked checkbox in Today (edited in Claude Code)
 
 - A ticked checkbox in the Today card is a black square (`var(--ink)`) with a white ✓ (`.today-item.done .check`). The task list below keeps its pink ticked box. Last tracker.css block.
