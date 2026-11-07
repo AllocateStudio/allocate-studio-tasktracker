@@ -106,11 +106,11 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - Inbox stores tasks without a date. Unscheduled tasks are excluded from overdue counts and calendar views.
 - The task editor supports Daily, Weekdays, Weekly, and Monthly repeats. Completing an occurrence creates one next occurrence; repeating an old completion does not create a duplicate. Missed dates are skipped to the next future occurrence. Monthly repeats keep their original day, clamping to the last day of shorter months. Deleting an occurrence does not delete other occurrences.
-- Subtasks have individual checkboxes and a completion count in the task list. Edit the task to manage its checklist; the next recurring occurrence starts with unchecked subtasks.
+- ~~Subtasks~~: removed by the owner on purpose. There is no subtask UI in the editor or the task list. app.js still accepts an optional `subtasks` array in saved data and backups (for compatibility), but nothing shows or edits it. Do not add subtasks back unless asked.
 - Tomorrow, Next week, and No date / Inbox buttons fill the editor date; Save task applies the change. The date field supports any specific date.
 - Projects are created by entering a new project name in the editor. Existing projects appear as suggestions and in the project filter.
 - Select tasks enables bulk completion, scheduling, and deletion with confirmation. Select visible respects current filters; changing filters clears selection.
-- Search includes titles, project names, notes, and subtasks within the selected month or Inbox.
+- Search includes titles, project names and notes within the selected month (Inbox was removed later, see below).
 - Existing browser data and JSON backups remain compatible. Syntax and mocked-DOM tests passed, including recurrence boundaries, leap years, duplication prevention, bulk operations, and editor compatibility. Visual verification was not available.
 
 ### 2026-11-07: Inbox removed (edited in Claude Code)
