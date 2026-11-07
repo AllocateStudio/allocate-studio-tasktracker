@@ -46,5 +46,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .today-item.done .check{background:var(--mint)}
 .today-count.is-done{background:var(--mint)}
 
-/* Ticked checkbox everywhere: black square, white tick */
-.check[aria-pressed="true"],.done .check,.today-item.done .check{background:var(--ink);border-color:var(--ink);color:#fff}
+/* Ticked checkbox in Today: black square, white tick (the task list keeps its pink box) */
+.today-item.done .check{background:var(--ink);border-color:var(--ink);color:#fff}
