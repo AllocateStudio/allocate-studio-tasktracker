@@ -16,6 +16,10 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Black ticked checkbox (edited in Claude Code)
+
+- A ticked checkbox (task list and Today) is now a black square (`var(--ink)`) with a white ✓. It replaces the pink box in the list and the mint box in Today. Last tracker.css block.
+
 ### 2026-11-06: Completed tasks stay in Today (edited in Claude Code)
 
 - Ticking a task in the Today card no longer makes it disappear. It moves to the bottom of the list, turns mint (`.today-item.done`), is struck through, shows a ticked box and the meta "Completed · Due today" or "Completed · Was due Nov 4". Unticking puts it back in its place.
