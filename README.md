@@ -16,6 +16,10 @@ Verification: JavaScript syntax and a mocked-DOM smoke test covering rendering, 
 
 This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each change in detail.
 
+### 2026-11-06: Week range looks like the month picker (edited in Claude Code)
+
+- Week view: the separate ‹ / range / › buttons are replaced by one outlined control with the calendar icon, using the existing `.week-nav-picker` + `.mp-step` / `.mp-trigger` styles from styles.css (same look as the Month picker). The range label is not clickable; the arrows still use `data-week-step`. Today stays a separate button. On phones the picker fills the width and Today + Add task sit side by side below it. app.js `weekControls()`; last tracker.css block. Backup: `work/app-before-week-picker.js`.
+
 ### 2026-11-06: Quieter add buttons in Week (edited in Claude Code)
 
 - Week view: the ＋ next to each day name is hidden on devices with a mouse and appears when hovering the day row or focusing it with the keyboard (`@media(hover:hover)`). On touch screens it stays, fainter (opacity .3). Clicking a day still opens a new task for that date, as before. Month view and the phone day panel are unchanged. Last tracker.css block.

@@ -65,3 +65,6 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .week-row-label span{transition:opacity .15s}
 @media(hover:hover){.week-row-label span{opacity:0}.week-row:hover .week-row-label span,.week-row-label:focus-visible span{opacity:.6}}
 @media(hover:none){.week-row-label span{opacity:.3}}
+
+/* Week range uses the month picker's look (.week-nav-picker from styles.css). On phones: picker on its own line, Today and Add task side by side below. */
+@media(max-width:700px){.week-controls{display:contents}.week-controls .week-nav-picker{flex:1 1 100%}.week-controls .week-nav-picker .mp-trigger{flex:1;justify-content:center}}
