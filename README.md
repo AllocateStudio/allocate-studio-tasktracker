@@ -154,3 +154,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: No hover underline in Your tasks (edited in Claude Code)
 
 - The owner did not like the title underline on row hover, so it is removed. Rows still show a pointer cursor and open the editor on click. index.html CSS version `20261107-no-underline`.
+
+### 2026-11-07: No duplicated date and priority in Your tasks (edited in Claude Code)
+
+- On desktop the row meta line under the title shows only the project; date and priority already have their own columns. On phones (≤700px) those columns are hidden, so the meta line still shows "Project · November 3 · Medium priority" via `.meta-phone` (now with the full month instead of 2026-11-03). Backup: `work/app-before-meta-dedupe.js`. index.html CSS version `20261107-meta-dedupe`.
