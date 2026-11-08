@@ -205,3 +205,4 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Shorter pause before the Today slide (edited in Claude Code)
 
 - Owner asked for a shorter pause: the ticked task now waits 0.33s (was 0.55s) before sliding down. `setTimeout` in `todayToggle()`.
+- Then shortened again to 0.25s at the owner's request.
