@@ -13,7 +13,7 @@ try{const raw=localStorage.getItem(KEY);if(raw){const parsed=JSON.parse(raw);if(
 function validDate(v){return typeof v==='string'&&/^(19|20|21)\d{2}-\d{2}-\d{2}$/.test(v)&&stamp(new Date(v+'T12:00:00'))===v;}
 function valid(d){return d&&Array.isArray(d.tasks)&&[0,1].includes(d.weekStart)&&new Set(d.tasks.map(t=>t?.id)).size===d.tasks.length&&d.tasks.every(t=>t&&typeof t.id==='string'&&typeof t.title==='string'&&t.title.trim()&&typeof t.project==='string'&&typeof t.notes==='string'&&['High','Medium','Low'].includes(t.priority)&&['To do','In progress','Done'].includes(t.status)&&(t.date===''||validDate(t.date))&&(t.repeat===undefined||repeats.includes(t.repeat))&&(!t.repeat||t.repeat==='None'||!!t.date)&&(t.subtasks===undefined||Array.isArray(t.subtasks)&&t.subtasks.every(x=>x&&typeof x.title==='string'&&typeof x.done==='boolean')));}
 function addDays(date,n){const d=new Date(date+'T12:00:00');d.setDate(d.getDate()+n);return stamp(d);}
-function projects(){const gone=data.removedProjects||[];return [...new Set(['Personal',...['Work','Home'].filter(p=>!gone.includes(p)),...(data.extraProjects||[]),...data.tasks.map(t=>t.project).filter(Boolean)])].sort();}
+function projects(){const gone=data.removedProjects||[];return [...new Set(['Personal',...['Work','Home'].filter(p=>!gone.includes(p)),...(data.extraProjects||[]),...data.tasks.map(t=>t.project).filter(Boolean)])].sort((a,b)=>(b==='Personal')-(a==='Personal')||a.localeCompare(b));}
 const projectCount=p=>data.tasks.filter(t=>(t.project||'Personal')===p).length;
 let renamingProject='';
 function forgetProject(p){if(['Work','Home'].includes(p))data.removedProjects=[...new Set([...(data.removedProjects||[]),p])];data.extraProjects=(data.extraProjects||[]).filter(x=>x!==p);}

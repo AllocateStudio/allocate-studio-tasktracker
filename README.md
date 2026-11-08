@@ -215,3 +215,4 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Data: two optional fields on `data`: `removedProjects` (hides deleted built-ins Work/Home) and `extraProjects` (keeps a renamed project that has no tasks yet). `projects()` reads both. Older data and backups without them still work; `valid()` ignores extra fields.
 - Settings order: Calendar | Backup, Sample tasks | Delete all, Projects.
 - Checked in the browser: typo merge, rename, delete, Escape cancels, filter options update, no console errors. Backup: `work/app-before-projects.js`. index.html CSS version `20261107-projects`.
+- Personal is listed first (Settings Projects, the project filter and the editor's project suggestions); the rest stay A–Z.
