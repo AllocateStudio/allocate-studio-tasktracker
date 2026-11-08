@@ -195,3 +195,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - **Delete all tasks** card: empties the tracker after a confirm ("cannot be undone", suggests exporting a backup first). Button style `.btn.danger` (white with dark red text, pink on hover). Not re-seeded on reload either.
 - Cards are in two columns on desktop, one column on phones.
 - Checked in the browser: Monday switch changes the calendar's first day; remove samples, add them back, delete all, reload stays empty. Backup: `work/app-before-settings.js`. index.html CSS version `20261107-settings`.
+
+### 2026-11-07: Today tick animation (edited in Claude Code)
+
+- Ticking a task in Today now shows the tick and the green "done" look right away (colours fade in over .25s), waits ~0.55s, then the list re-renders and every moved item slides to its new place (FLIP animation, .5s). The ticked task stays on top while it slides (`.moving`). Unticking works the same way in reverse.
+- Code: `toggleTask(id)` (shared state change), `todayToggle(item,button)` (animation), `data-id` on `.today-item`. Other lists (Your tasks, calendar) toggle instantly as before. Users with "reduce motion" turned on get the instant version.
+- Backup: `work/app-before-today-anim.js`. index.html CSS version `20261107-today-anim`.

@@ -139,3 +139,6 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .btn.danger{background:#fff;color:#922f46;border-color:#922f46}
 @media(hover:hover){.btn.danger:hover{background:var(--blush);color:var(--ink);border-color:var(--ink)}}
 @media(max-width:700px){.settings-grid{grid-template-columns:1fr}}
+/* Today: soft colour change when a task is ticked before it slides down (2026-11-07) */
+.today-item .today-open,.today-item .check{transition:background-color .25s ease,border-color .25s ease,color .25s ease}
+.today-item.moving{position:relative;z-index:2}
