@@ -175,3 +175,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
   - CSS for `.bulk-bar`, `.select-row`, `.subtask-*`, `.subdone`, `.form-grid h3`.
 - Checked in the browser: undated task gets today's date; tick/untick; new task with Tomorrow + Weekly; reschedule Next week; completing a repeat creates the next one; delete; Calendar Month/Week; Settings. No console errors.
 - Backups: `work/app-before-cleanup.js`, `work/tracker-before-cleanup.css`. index.html CSS version `20261107-cleanup`.
+
+### 2026-11-07: Undated tasks are listed, not auto-dated (edited in Claude Code)
+
+- Owner's call: instead of giving undated tasks today's date (previous entry), they now just appear at the end of Your tasks with "No date", in every month. They are not shown in Today or the calendar and never count as overdue. Opening one asks for a date on save, since the date field is required. `fillDates()` is removed; the `monthTasks()` guard stays, so the crash fix still holds.
