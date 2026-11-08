@@ -120,5 +120,7 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .resched.open .resched-btn{background:var(--ink);color:#fff}
 .resched.open{z-index:30}
 .mp-trigger svg.lucide-ico{stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-/* Today: black reschedule button with white icon, like the Today checkbox (2026-11-07) */
-.today-card .resched-btn{background:var(--ink);border-color:var(--ink);color:#fff}
+/* Today: reschedule is a bare black icon on the row color, no frame (2026-11-07) */
+.today-card .resched-btn{background:transparent;border-color:transparent;color:var(--ink)}
+.today-card .resched-btn svg{width:19px;height:19px;stroke-width:2}
+.today-card .resched.open .resched-btn{background:var(--ink);border-color:var(--ink);color:#fff}

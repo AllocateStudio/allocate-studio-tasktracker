@@ -133,6 +133,6 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - The owner chose Lucide `calendar-days` (her variant: top ticks `v3`, rect at y=3, divider at y=9, two rows of dots). It replaces `calendar-range` in the Week picker (app.js `weekControls()`) and the old hand-drawn icon in the Month picker (`month-picker.js`, this product's copy only; Bill Calendar's copy is unchanged). Both use class `lucide-ico`. index.html CSS version `20261107-days-icon`.
 
-### 2026-11-07: Black reschedule button in Today (edited in Claude Code)
+### 2026-11-07: Bare reschedule icon in Today (edited in Claude Code)
 
-- In the Today card the reschedule button is now a black square with a white calendar-clock icon, matching the black Today checkbox. The Week list and Your tasks keep the white button. Still hover-only on desktop. tracker.css block at the end; index.html CSS version `20261107-today-resched-black`.
+- In the Today card the reschedule button has no frame or fill: just the black calendar-clock icon (19px) on the row color. The owner tried a black square first and did not like it. When the menu is open it turns into a black square with a white icon. The Week list and Your tasks keep the white framed button. Still hover-only on desktop. index.html CSS version `20261107-today-resched-bare`.
