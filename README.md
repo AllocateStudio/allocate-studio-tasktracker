@@ -264,3 +264,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - New `statusPill(t)` in app.js builds the pill for both the desktop column and the phone line; `row()` passes it to `metaLine()` as `extra`. Desktop is unchanged (`.meta-phone` stays hidden there).
 - Smaller pill style `.meta-line .ml-extra .task-status` at the end of tracker.css. index.html CSS version `20261107-phone-status`.
 - Follow-up: the pill now always sits on its own line under date, priority and project (`.task-row .meta-line .ml-extra{flex-basis:100%}`), so every pill starts at the same left edge instead of trailing text of different widths. index.html CSS version `20261107-phone-status-line`.
+
+### 2026-11-08: Your tasks phone meta line: no calendar icon before the date (edited in Claude Code)
+
+- Removed the small calendar icon in front of the date (the reschedule button on the right already uses a calendar). Deleted the unused `metaCal` constant in app.js and the `.meta-line .ml-ico` rule in tracker.css. The date stays bold, dark red when overdue. index.html CSS version `20261108-no-date-icon`.
