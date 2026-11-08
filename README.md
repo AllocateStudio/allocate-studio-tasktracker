@@ -287,3 +287,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - The Projects card has a "+ Add project" button in its head. It opens an inline form at the top of the list (name field, Add, Cancel; Enter adds, Escape cancels). Names are trimmed and capped at 80 characters; an existing name (any case) shows a toast and keeps the form open.
 - New `addProject(name)` and `addingProject` state in app.js. A new project goes into `data.extraProjects` (or is un-hidden from `removedProjects` if it is Work/Home), shows with 0 tasks, and appears in the task editor's project list right away. Opening Rename closes the add form and vice versa.
 - Small head button styles at the end of tracker.css. index.html CSS version `20261108-add-project`.
+
+### 2026-11-08: Task editor: project is a list with "+ Add new project…" (edited in Claude Code)
+
+- The editor's Project field is now a `<select>` of `projects()` (new tasks default to Personal) with a last option "+ Add new project…" (value `__new__`). Typing a brand new project name in the editor is no longer possible; new projects are added in Settings.
+- Choosing "+ Add new project…" closes the editor and opens Settings with the Projects add form open and focused. If a task name was already typed, it asks first ("Leave this task without saving…"); Cancel puts the previous project back and keeps the editor open.
+- Safety: the save handler maps a stray `__new__` to Personal. No CSS change.
