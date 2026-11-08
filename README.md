@@ -273,3 +273,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - Owner asked for Today to match Your tasks. `todayCard()` now uses `metaLine()`: date (bold; dark red when overdue, "Today" when due today, "Completed" when done), coloured priority dot, project, plus "In progress" when relevant. The card colour already says overdue, so the date has no "Was due" prefix and the line stays on one row.
 - Removed the now-unused `short()` in `todayCard()`. Added `.today-meta{opacity:1}` and a 2px top margin at the end of tracker.css. Calendar Week is unchanged. index.html CSS version `20261108-today-meta`.
+
+### 2026-11-08: Your tasks desktop priority column with coloured dots (edited in Claude Code)
+
+- The Priority column now shows a coloured dot before the word (High pink #e0457b, Medium yellow #f2c94c, Low blue #9fc0f0), same as the meta line in Today and on phones. The badge span gets `pri-col pr-<Priority>` plus an `<i>`; styles at the end of tracker.css. index.html CSS version `20261108-pri-dots`.
