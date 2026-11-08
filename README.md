@@ -136,3 +136,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Bare reschedule icon in Today (edited in Claude Code)
 
 - In the Today card the reschedule button has no frame or fill: just the black calendar-clock icon (19px) on the row color. The owner tried a black square first and did not like it. When the menu is open it turns into a black square with a white icon. The Week list and Your tasks keep the white framed button. Still hover-only on desktop. index.html CSS version `20261107-today-resched-bare`.
+
+### 2026-11-07: Bare reschedule icon in Calendar Week too (edited in Claude Code)
+
+- The Calendar Week list (`.week-task-body`) now uses the same bare black reschedule icon as Today (no frame, 19px, black square only while the menu is open). Your tasks keeps the white framed button. index.html CSS version `20261107-week-resched-bare`.
