@@ -74,21 +74,11 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(hover:hover) and (min-width:701px){.calendar-grid .day:hover .day-add span,.calendar-grid .day-add:focus-visible span{opacity:.6}}
 @media(max-width:700px){.calendar-grid .day-add span{display:none}}
 /* Task planning controls. */
-.bulk-bar:empty{display:none}.bulk-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:14px;background:var(--butter);border-radius:12px;margin-bottom:16px}.select-row{grid-template-columns:30px 1fr auto}.select-row input,.subtask-line input{min-height:22px;width:22px;height:22px;accent-color:var(--ink)}.quick-dates{display:flex;flex-wrap:wrap;gap:8px}.quick-dates .btn{font-size:12px;min-height:36px;padding:7px 10px}.field-hint{font-size:12px;font-weight:400;color:var(--ink-soft)}.subtask-add{display:flex;gap:10px;margin-top:12px}.subtask-add input{width:100%;min-width:0}.subtask-line{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 0}.subtask-line span{flex:1;overflow-wrap:anywhere}.subdone{text-decoration:line-through;color:var(--muted)}.form-grid h3{font-size:14px;margin:0 0 10px}.filters #project-filter{max-width:220px}@media(max-width:700px){#navigation{flex-wrap:wrap}.panel-head{flex-wrap:wrap}.bulk-bar .btn{font-size:12px;padding:7px 9px}.select-row{grid-template-columns:24px 1fr}.select-row>span{grid-column:2;font-size:12px}}
+.quick-dates{display:flex;flex-wrap:wrap;gap:8px}.quick-dates .btn{font-size:12px;min-height:36px;padding:7px 10px}.field-hint{font-size:12px;font-weight:400;color:var(--ink-soft)}.filters #project-filter{max-width:220px}@media(max-width:700px){#navigation{flex-wrap:wrap}.panel-head{flex-wrap:wrap}}
 /* Date words use the regular text face; numeric typography stays unchanged. */
 @font-face{font-family:'Date Text';src:url('assets/fonts/DM-Sans.ttf') format('truetype');font-style:normal;font-weight:100 1000;font-display:swap;unicode-range:U+0041-005A,U+0061-007A,U+00C0-024F,U+0400-052F}
 .mp-trigger,.mp-dialog .mp-cell,.today-date,.week-row-label,.task-row .date,input[type="date"]{font-family:'Date Text','DM Sans',Arial,sans-serif}
 .day-panel h2{font-family:'Date Text','Plus Jakarta Sans',sans-serif}
-/* Match new checklist controls to the approved task checkbox. */
-.select-row input[type="checkbox"],.subtask-line input[type="checkbox"]{
-  -webkit-appearance:none;appearance:none;display:grid;place-items:center;
-  width:25px;height:25px;min-height:25px;flex:0 0 25px;margin:0;
-  border:1.5px solid var(--ink);border-radius:7px;background:#fff;color:var(--ink);
-  font-family:'DM Sans',Arial,sans-serif;font-size:16px;font-weight:800;
-  line-height:1;padding:1.3px 0.6px 0 0;cursor:pointer;
-}
-.select-row input[type="checkbox"]:checked,.subtask-line input[type="checkbox"]:checked{background:var(--blush)}
-.select-row input[type="checkbox"]:checked::before,.subtask-line input[type="checkbox"]:checked::before{content:'✓'}
 /* Approved reference: pink square, black outline and black tick in every list. */
 .check{width:25px;height:25px;min-width:25px;border:1.5px solid var(--ink);border-radius:7px;font-family:'DM Sans',Arial,sans-serif;font-size:16px;font-weight:800;color:var(--ink)}
 .done .check,.today-item.done .check{background:var(--blush);border-color:var(--ink);color:var(--ink)}

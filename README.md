@@ -164,3 +164,14 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - On desktop the reschedule icon in Your tasks now sits right after the date in the Due date column (bare black icon like Today and Week, menu opens under it, left-aligned). It used to float at the right edge of the title column and looked tied to Priority.
 - `row()` renders `quickMove(t)` twice: inside `.date` (desktop) and inside `.resched-phone` in `.task-main` (phones, where the date column is hidden). CSS shows one or the other at 700px. Due date column is 150px.
 - Backup: `work/app-before-resched-by-date.js`. index.html CSS version `20261107-resched-by-date2`.
+
+### 2026-11-07: Fix for tasks without a date + cleanup of removed features (edited in Claude Code)
+
+- **Bug fixed:** after Inbox was removed, any task with an empty date (left over from Inbox, or from an older backup) crashed the Tasks and Calendar screens (`monthTasks()` called `startsWith` on an empty value). Now `fillDates()` gives such tasks today's date on load and on backup import, and saves once. `monthTasks()` is also guarded.
+- **Removed dead code** (none of it was reachable on screen):
+  - Inbox branches in `render()`, `editor()` and the quick-date handler (`data-shift="inbox"`), plus the "repeat needs a date" check (date is always required now).
+  - Bulk select: `selecting`, `selected`, `bulk()`, `#bulk-bar`, the select-row markup, `data-select-mode` / `data-bulk` / `data-select` handlers.
+  - Subtasks: the `subtasks` copy in `editor()` and in `complete()`. `valid()` still accepts a `subtasks` field so old backups import fine.
+  - CSS for `.bulk-bar`, `.select-row`, `.subtask-*`, `.subdone`, `.form-grid h3`.
+- Checked in the browser: undated task gets today's date; tick/untick; new task with Tomorrow + Weekly; reschedule Next week; completing a repeat creates the next one; delete; Calendar Month/Week; Settings. No console errors.
+- Backups: `work/app-before-cleanup.js`, `work/tracker-before-cleanup.css`. index.html CSS version `20261107-cleanup`.
