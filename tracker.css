@@ -205,3 +205,11 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .meta-line .pr-Low i{background:#9fc0f0}
 .task-row .meta-phone{display:none}
 @media(max-width:700px){.task-row .meta-phone{display:block;margin-top:3px}.task-row .meta-desk{display:none}}
+/* Your tasks filters: search border matches the selects; phone = search full width, three equal filters below (2026-11-07) */
+.filters #search{border:1px solid #8b8b90;border-radius:9px}
+@media(max-width:700px){
+  .filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .filters #search{grid-column:1/-1;min-width:0;width:100%}
+  .filters select{min-width:0;width:100%;max-width:none;font-size:13px;padding:10px 8px;text-overflow:ellipsis}
+  .filters #project-filter{max-width:none}
+}

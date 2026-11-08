@@ -250,3 +250,10 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Where: Your tasks on phones (desktop keeps only the project, since date and priority have columns), Today ("Today" / "Was due November 4" / "Completed" as the date text, "In progress" as extra), Calendar Week and the phone day panel (no date, since the day is the heading; "In progress" / "Overdue" as extra).
 - Styles: `.meta-line`, `.ml-date`, `.ml-pri`, `.ml-proj`, `.ml-extra` at the end of tracker.css. Removed the now-unused `short()` in `todayCard()`. Backup: `work/app-before-meta-line.js`. index.html CSS version `20261107-meta-line`.
 - Owner changed her mind: the new meta line is **only for Your tasks** (phones). Today, Calendar Week and the day panel are back to their previous text exactly as before. `metaLine()` stays and is used only by `row()`. index.html CSS version `20261107-meta-line-list`.
+
+### 2026-11-07: Your tasks filters: "All statuses", search border, phone layout (edited in Claude Code)
+
+- The status filter's first option now reads "All statuses" (value stays `All`, so filtering is unchanged).
+- The search field has the same 1px #8b8b90 border and 9px radius as the selects.
+- Phones: search takes the full width on the first line, the three filters (statuses, priorities, projects) sit below in three equal columns, 13px text.
+- Styles at the end of tracker.css. index.html CSS version `20261107-filters`.
