@@ -230,3 +230,4 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Phone header: Add task next to the title (edited in Claude Code)
 
 - Replaces the "Add task on top, full width" layout from earlier today. On phones the header is a grid: title on the left, a normal-size "＋ Add task" on the right (not stretched), and the month or week picker full width underneath. In Week view the Today button sits on its own row under the picker. Desktop unchanged. index.html CSS version `20261107-add-right`.
+- Tasks tab icon changed to the owner's pick, Lucide `logs` (three rows of dots and lines), instead of `list-checks`.
