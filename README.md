@@ -216,3 +216,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Settings order: Calendar | Backup, Sample tasks | Delete all, Projects.
 - Checked in the browser: typo merge, rename, delete, Escape cancels, filter options update, no console errors. Backup: `work/app-before-projects.js`. index.html CSS version `20261107-projects`.
 - Personal is listed first (Settings Projects, the project filter and the editor's project suggestions); the rest stay A–Z.
+
+### 2026-11-07: Phone header: Add task on top, month picker full width (edited in Claude Code)
+
+- On phones (≤700px) the header actions stack: "＋ Add task" first (full width, `order:-1`), then the month picker stretched to the full width with the month centred. The Week view gets the same Add task on top; its week picker was already full width. Desktop unchanged. index.html CSS version `20261107-month-full2`.
