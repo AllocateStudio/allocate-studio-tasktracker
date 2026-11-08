@@ -297,3 +297,4 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-08: Today card: overdue date no longer red (edited in Claude Code)
 
 - In the Today card the overdue date stays dark ink, since the pink card already marks it overdue (`.today-meta .meta-line .ml-date.late{color:var(--ink)}`). Your tasks keeps the dark red overdue date. index.html CSS version `20261108-today-date-ink`.
+- Fix: the dot styles had un-hidden the priority column on phones (a second "● High" line under each task). `.task-row>.pri-col{display:inline-flex}` now lives inside `@media(min-width:701px)`, so phones hide the column again. index.html CSS version `20261108-pri-phone-fix`.

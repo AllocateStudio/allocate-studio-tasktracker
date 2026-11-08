@@ -220,7 +220,7 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .today-meta{opacity:1}
 .today-meta .meta-line{margin-top:2px}
 /* Your tasks desktop priority column: coloured dot + word, same as the meta line (2026-11-08) */
-.task-row>.pri-col{display:inline-flex;align-items:center;gap:7px}
+@media(min-width:701px){.task-row>.pri-col{display:inline-flex;align-items:center;gap:7px}}
 .task-row>.pri-col i{width:9px;height:9px;border-radius:50%;border:1px solid var(--ink);flex:none}
 .task-row>.pr-High i{background:#e0457b}
 .task-row>.pr-Medium i{background:#f2c94c}
