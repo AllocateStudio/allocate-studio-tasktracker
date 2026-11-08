@@ -201,3 +201,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Ticking a task in Today now shows the tick and the green "done" look right away (colours fade in over .25s), waits ~0.55s, then the list re-renders and every moved item slides to its new place (FLIP animation, .5s). The ticked task stays on top while it slides (`.moving`). Unticking works the same way in reverse.
 - Code: `toggleTask(id)` (shared state change), `todayToggle(item,button)` (animation), `data-id` on `.today-item`. Other lists (Your tasks, calendar) toggle instantly as before. Users with "reduce motion" turned on get the instant version.
 - Backup: `work/app-before-today-anim.js`. index.html CSS version `20261107-today-anim`.
+
+### 2026-11-07: Shorter pause before the Today slide (edited in Claude Code)
+
+- Owner asked for a shorter pause: the ticked task now waits 0.33s (was 0.55s) before sliding down. `setTimeout` in `todayToggle()`.
