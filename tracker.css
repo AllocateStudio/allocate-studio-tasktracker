@@ -241,3 +241,9 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .today-card.collapsed .today-collapse svg{transform:none}
 .today-card.collapsed .today-body{display:none}
 @media(prefers-reduced-motion:reduce){.today-collapse svg{transition:none}}
+/* Coloured priority dot everywhere priority is written: Calendar Week rows, phone day panel, calendar cells (2026-11-08) */
+.pri-dot{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.pri-dot i{width:8px;height:8px;border-radius:50%;border:1px solid var(--ink);flex:none}
+.pri-dot.pr-High i{background:#e0457b}
+.pri-dot.pr-Medium i{background:#f2c94c}
+.pri-dot.pr-Low i{background:#9fc0f0}

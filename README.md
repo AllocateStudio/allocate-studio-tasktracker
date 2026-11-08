@@ -304,3 +304,8 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - A chevron button in the top-right corner of the Today card hides or shows the task list. The title, date and the due / overdue / done counts stay visible when collapsed. The choice is remembered on this device in localStorage key `allocate-task-tracker-today-collapsed` (separate from the task data, so backups are unaffected).
 - app.js: `todayCollapsed` state, the list and empty message are wrapped in `#today-body`, click handler `data-today-collapse` toggles the class without a full re-render; re-renders keep the state. Button has `aria-expanded` / `aria-controls` and a Show/Hide label.
 - Styles at the end of tracker.css (chevron rotates; reduced motion skips the rotation). index.html CSS version `20261108-today-collapse`.
+
+### 2026-11-08: Coloured priority dot everywhere (edited in Claude Code)
+
+- New `priDot(priority, suffix)` helper in app.js renders `<span class="pri-dot pr-X"><i></i>X…</span>`. Used in Calendar Week rows and the phone day panel ("Home · ● Medium priority · In progress") and the calendar cell week meta. Your tasks (desktop column and phone line) and Today already had dots. The filter and editor dropdowns stay plain text (native selects can't show dots).
+- `.pri-dot` styles at the end of tracker.css, same colours as elsewhere. index.html CSS version `20261108-pri-dots-all`.
