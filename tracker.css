@@ -183,3 +183,10 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
   .tab-label{font-size:11px}
   #toast{bottom:calc(76px + env(safe-area-inset-bottom))}
 }
+/* Phone: logo, TASK TRACKER and "Saved on this device" on one line (2026-11-07) */
+@media(max-width:700px){
+  .topbar{flex-wrap:nowrap;align-items:center;gap:10px}
+  .wordmark{flex-wrap:nowrap;min-width:0}
+  .topbar-actions{width:auto;flex:0 1 auto;flex-wrap:nowrap;justify-content:flex-end;margin-left:auto}
+  .topbar-actions .save-state{flex-basis:auto;font-size:11px;white-space:nowrap;text-align:right}
+}

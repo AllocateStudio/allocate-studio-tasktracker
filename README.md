@@ -233,3 +233,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - Tasks tab icon changed to the owner's pick, Lucide `logs` (three rows of dots and lines), instead of `list-checks`.
 - Bottom bar made a bit smaller at the owner's request: icons 22px (was 27), labels 11px, tighter padding; `#app` bottom padding 92px. index.html CSS version `20261107-smaller-bar`.
 - Tasks tab icon changed again to the owner's pick: Lucide `list-todo` (a box and a tick beside three lines).
+
+### 2026-11-07: Phone top bar on one line (edited in Claude Code)
+
+- On phones the logo, "TASK TRACKER" and "Saved on this device" now sit on one line (save state right-aligned, 11px, no wrap). Overrides the shared styles.css phone rules that pushed the save state to its own row. Checked at 440px (simulator) and 375px with no horizontal scroll. index.html CSS version `20261107-one-line-top`.
