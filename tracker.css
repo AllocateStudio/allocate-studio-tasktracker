@@ -215,3 +215,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 }
 /* Your tasks on phones: status pill at the end of the meta line (desktop keeps its own column) (2026-11-07) */
 .meta-line .ml-extra .task-status{display:inline-block;font-size:11.5px;line-height:1.3;padding:2px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+/* Phone status pill always on its own line under date, priority and project, so every pill starts at the same left edge (2026-11-07) */
+.task-row .meta-line .ml-extra{flex-basis:100%;display:flex;margin-top:3px}
