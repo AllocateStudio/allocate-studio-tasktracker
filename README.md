@@ -237,3 +237,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Phone top bar on one line (edited in Claude Code)
 
 - On phones the logo, "TASK TRACKER" and "Saved on this device" now sit on one line (save state right-aligned, 11px, no wrap). Overrides the shared styles.css phone rules that pushed the save state to its own row. Checked at 440px (simulator) and 375px with no horizontal scroll. index.html CSS version `20261107-one-line-top`.
+
+### 2026-11-07: Your tasks: done tasks at the bottom, same tick animation as Today (edited in Claude Code)
+
+- `filteredTasks()` now sorts open tasks first, done tasks last (then by date, then title).
+- Ticking a task in Your tasks behaves like Today: tick and done look show at once, 0.25s pause, then rows slide to their new places (0.5s). The shared function is still `todayToggle()`; it now handles `.today-item` and `.task-row` (both carry `data-id`), keyed per list so the same task in Today and the list animates in each. Reduce-motion users get the instant version.
+- Backup: `work/app-before-list-done-bottom.js`. index.html CSS version `20261107-list-done-bottom`.

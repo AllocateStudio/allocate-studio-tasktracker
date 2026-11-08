@@ -190,3 +190,6 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
   .topbar-actions{width:auto;flex:0 1 auto;flex-wrap:nowrap;justify-content:flex-end;margin-left:auto}
   .topbar-actions .save-state{flex-basis:auto;font-size:11px;white-space:nowrap;text-align:right}
 }
+/* Your tasks: soft colour change on tick before the row slides down (2026-11-07) */
+.task-row .check,.task-row .task-title{transition:background-color .25s ease,border-color .25s ease,color .25s ease}
+.task-row.moving{position:relative;z-index:2;background:var(--card,#fff)}
