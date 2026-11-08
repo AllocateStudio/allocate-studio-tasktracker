@@ -277,3 +277,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-08: Your tasks desktop priority column with coloured dots (edited in Claude Code)
 
 - The Priority column now shows a coloured dot before the word (High pink #e0457b, Medium yellow #f2c94c, Low blue #9fc0f0), same as the meta line in Today and on phones. The badge span gets `pri-col pr-<Priority>` plus an `<i>`; styles at the end of tracker.css. index.html CSS version `20261108-pri-dots`.
+
+### 2026-11-08: Settings order: Projects right after Calendar preferences (edited in Claude Code)
+
+- New order: Calendar preferences, Projects, then Backup & restore and Sample tasks side by side, then Delete all tasks. Calendar preferences and Delete all tasks are now full width too (`.wide-panel`), so the two-column grid has no empty cells. Phones stay one column. index.html CSS version `20261108-settings-order`.

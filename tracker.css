@@ -225,3 +225,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .task-row>.pr-High i{background:#e0457b}
 .task-row>.pr-Medium i{background:#f2c94c}
 .task-row>.pr-Low i{background:#9fc0f0}
+/* Settings order: Calendar preferences, Projects (both full width), then Backup + Sample tasks side by side, Delete all full width (2026-11-08) */
+.settings-grid .wide-panel{grid-column:1/-1}
