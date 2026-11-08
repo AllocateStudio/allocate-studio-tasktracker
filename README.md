@@ -257,3 +257,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - The search field has the same 1px #8b8b90 border and 9px radius as the selects.
 - Phones: search takes the full width on the first line, the three filters (statuses, priorities, projects) sit below in three equal columns, 13px text.
 - Styles at the end of tracker.css. index.html CSS version `20261107-filters`.
+
+### 2026-11-07: Your tasks on phones show the status (edited in Claude Code)
+
+- Phones hide the status column, so the status pill (To do / In progress / Done / Overdue, same colours as desktop) now sits at the end of the phone meta line, after the project. It wraps under the date on narrow screens.
+- New `statusPill(t)` in app.js builds the pill for both the desktop column and the phone line; `row()` passes it to `metaLine()` as `extra`. Desktop is unchanged (`.meta-phone` stays hidden there).
+- Smaller pill style `.meta-line .ml-extra .task-status` at the end of tracker.css. index.html CSS version `20261107-phone-status`.

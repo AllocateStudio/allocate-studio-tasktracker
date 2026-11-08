@@ -213,3 +213,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
   .filters select{min-width:0;width:100%;max-width:none;font-size:13px;padding:10px 8px;text-overflow:ellipsis}
   .filters #project-filter{max-width:none}
 }
+/* Your tasks on phones: status pill at the end of the meta line (desktop keeps its own column) (2026-11-07) */
+.meta-line .ml-extra .task-status{display:inline-block;font-size:11.5px;line-height:1.3;padding:2px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
