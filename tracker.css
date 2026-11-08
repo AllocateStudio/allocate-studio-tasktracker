@@ -255,3 +255,8 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .ask-dialog{width:min(420px,calc(100% - 32px))}
 .ask-text{font-size:16px;font-weight:600;line-height:1.45;margin:0}
 .ask-dialog .dialog-actions{margin-top:22px}
+/* Projects rows: fixed-width actions area so the "N tasks" counts line up, Personal's "Default" sits in the same slot (2026-11-08) */
+.project-actions{flex:0 0 170px;display:flex;justify-content:flex-end;align-items:center;gap:10px}
+.project-actions .project-note{flex:1;text-align:center;min-width:0}
+.project-count{flex:0 0 auto;text-align:right}
+@media(max-width:700px){.project-actions{flex:0 0 auto;margin-left:auto}.project-actions .project-note{flex:0 0 auto}}

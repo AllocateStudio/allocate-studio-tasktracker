@@ -327,3 +327,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-08: Repeat hint removed (edited in Claude Code)
 
 - Owner asked to drop the "The next task is created when you complete this one." line under Repeat entirely. Repeating still works the same (completing a repeating task creates the next one). Removed the hint span and its change handler from app.js; `.field-hint[hidden]` CSS is now unused but harmless.
+
+### 2026-11-08: Settings Projects: task counts aligned (edited in Claude Code)
+
+- Rename/Delete buttons and Personal's "Default" now sit in one fixed-width slot `.project-actions` (170px on desktop), so the "N tasks" counts line up in every row. Phones keep the wrapped layout with counts aligned right. index.html CSS version `20261108-project-align`.
