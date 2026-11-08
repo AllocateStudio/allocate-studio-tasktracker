@@ -227,3 +227,6 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .task-row>.pr-Low i{background:#9fc0f0}
 /* Settings order: Calendar preferences, Projects (both full width), then Backup + Sample tasks side by side, Delete all full width (2026-11-08) */
 .settings-grid .wide-panel{grid-column:1/-1}
+/* Settings Projects: "+ Add project" button in the card head, inline add form at the top of the list (2026-11-08) */
+.projects-panel .panel-head{margin-bottom:0}
+.projects-panel .panel-head .btn{min-height:38px;padding:8px 14px;font-size:13px}

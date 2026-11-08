@@ -281,3 +281,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-08: Settings order: Projects right after Calendar preferences (edited in Claude Code)
 
 - New order: Calendar preferences, Projects, then Backup & restore and Sample tasks side by side, then Delete all tasks. Calendar preferences and Delete all tasks are now full width too (`.wide-panel`), so the two-column grid has no empty cells. Phones stay one column. index.html CSS version `20261108-settings-order`.
+
+### 2026-11-08: Settings Projects: "+ Add project" (edited in Claude Code)
+
+- The Projects card has a "+ Add project" button in its head. It opens an inline form at the top of the list (name field, Add, Cancel; Enter adds, Escape cancels). Names are trimmed and capped at 80 characters; an existing name (any case) shows a toast and keeps the form open.
+- New `addProject(name)` and `addingProject` state in app.js. A new project goes into `data.extraProjects` (or is un-hidden from `removedProjects` if it is Work/Home), shows with 0 tasks, and appears in the task editor's project list right away. Opening Rename closes the add form and vice versa.
+- Small head button styles at the end of tracker.css. index.html CSS version `20261108-add-project`.
