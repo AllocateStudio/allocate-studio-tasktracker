@@ -243,3 +243,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - `filteredTasks()` now sorts open tasks first, done tasks last (then by date, then title).
 - Ticking a task in Your tasks behaves like Today: tick and done look show at once, 0.25s pause, then rows slide to their new places (0.5s). The shared function is still `todayToggle()`; it now handles `.today-item` and `.task-row` (both carry `data-id`), keyed per list so the same task in Today and the list animates in each. Reduce-motion users get the instant version.
 - Backup: `work/app-before-list-done-bottom.js`. index.html CSS version `20261107-list-done-bottom`.
+
+### 2026-11-07: One meta line style everywhere (edited in Claude Code)
+
+- Replaced the "Work · November 7 · High priority" dot-separated lines with one shared `metaLine(t, opts)` in app.js: bold date with a small calendar icon (dark red when overdue), a coloured priority dot with the word (High pink, Medium yellow, Low blue), then the project in grey, plus optional extra words.
+- Where: Your tasks on phones (desktop keeps only the project, since date and priority have columns), Today ("Today" / "Was due November 4" / "Completed" as the date text, "In progress" as extra), Calendar Week and the phone day panel (no date, since the day is the heading; "In progress" / "Overdue" as extra).
+- Styles: `.meta-line`, `.ml-date`, `.ml-pri`, `.ml-proj`, `.ml-extra` at the end of tracker.css. Removed the now-unused `short()` in `todayCard()`. Backup: `work/app-before-meta-line.js`. index.html CSS version `20261107-meta-line`.
