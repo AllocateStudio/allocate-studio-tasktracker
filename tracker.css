@@ -232,3 +232,12 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .projects-panel .panel-head .btn{min-height:38px;padding:8px 14px;font-size:13px}
 /* Today card: overdue date stays dark ink (the pink card already says overdue) (2026-11-08) */
 .today-meta .meta-line .ml-date.late{color:var(--ink)}
+/* Today card can be collapsed: chevron top-right, the counts stay visible, the list hides; remembered on this device (2026-11-08) */
+.today-card{position:relative}
+.today-card .today-head{padding-right:44px}
+.today-collapse{position:absolute;top:12px;right:12px;width:36px;height:36px;display:grid;place-items:center;border:1.5px solid transparent;border-radius:9px;background:transparent;color:var(--ink);cursor:pointer}
+.today-collapse:hover{border-color:var(--line)}
+.today-collapse svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;transform:rotate(180deg)}
+.today-card.collapsed .today-collapse svg{transform:none}
+.today-card.collapsed .today-body{display:none}
+@media(prefers-reduced-motion:reduce){.today-collapse svg{transition:none}}

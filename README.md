@@ -298,3 +298,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - In the Today card the overdue date stays dark ink, since the pink card already marks it overdue (`.today-meta .meta-line .ml-date.late{color:var(--ink)}`). Your tasks keeps the dark red overdue date. index.html CSS version `20261108-today-date-ink`.
 - Fix: the dot styles had un-hidden the priority column on phones (a second "● High" line under each task). `.task-row>.pri-col{display:inline-flex}` now lives inside `@media(min-width:701px)`, so phones hide the column again. index.html CSS version `20261108-pri-phone-fix`.
+
+### 2026-11-08: Today card can be collapsed (edited in Claude Code)
+
+- A chevron button in the top-right corner of the Today card hides or shows the task list. The title, date and the due / overdue / done counts stay visible when collapsed. The choice is remembered on this device in localStorage key `allocate-task-tracker-today-collapsed` (separate from the task data, so backups are unaffected).
+- app.js: `todayCollapsed` state, the list and empty message are wrapped in `#today-body`, click handler `data-today-collapse` toggles the class without a full re-render; re-renders keep the state. Button has `aria-expanded` / `aria-controls` and a Show/Hide label.
+- Styles at the end of tracker.css (chevron rotates; reduced motion skips the rotation). index.html CSS version `20261108-today-collapse`.
