@@ -179,3 +179,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Undated tasks are listed, not auto-dated (edited in Claude Code)
 
 - Owner's call: instead of giving undated tasks today's date (previous entry), they now just appear at the end of Your tasks with "No date", in every month. They are not shown in Today or the calendar and never count as overdue. Opening one asks for a date on save, since the date field is required. `fillDates()` is removed; the `monthTasks()` guard stays, so the crash fix still holds.
+
+### 2026-11-07: Due date is optional again (edited in Claude Code)
+
+- Owner's call: the Due date field in the editor is no longer required. Clear it to save a task with no date; such tasks go to the end of Your tasks as "No date" (see previous entry). A repeating task still needs a date: saving Repeat ≠ None with an empty date shows "Choose a date for a repeating task".
