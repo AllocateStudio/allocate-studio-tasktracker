@@ -144,3 +144,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Clicking outside the reschedule menu only closes it (edited in Claude Code)
 
 - Before, closing the open reschedule menu by clicking elsewhere also triggered whatever was under the click (often opening another task's editor). Now, while a menu is open, a click outside it only closes the menu (`preventDefault`, then stop). The next click works as usual. Clicking another task's reschedule icon still switches straight to that menu. Change is at the start of the delegated click handler in app.js. Backup: `work/app-before-resched-outside-click.js`.
+
+### 2026-11-07: Your tasks rows open the editor; full month names (edited in Claude Code)
+
+- The whole row in Your tasks now opens the editor (`.task-row[data-edit]`, role=button, tabindex=0; Enter or Space works too), same as Today and Week. The three-dots `.edit` button is removed and so is its empty header column. The checkbox and the reschedule icon still do their own thing and do not open the editor. On desktop the title underlines on hover.
+- The Due date column shows the full month ("November 7" instead of "Nov 7"); the column is 130px wide now.
+- Grid is `30px 1fr 100px 130px 115px` (phone `26px 1fr`). Backup: `work/app-before-row-click.js`. index.html CSS version `20261107-row-click`.
