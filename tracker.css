@@ -230,3 +230,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 /* Settings Projects: "+ Add project" button in the card head, inline add form at the top of the list (2026-11-08) */
 .projects-panel .panel-head{margin-bottom:0}
 .projects-panel .panel-head .btn{min-height:38px;padding:8px 14px;font-size:13px}
+/* Today card: overdue date stays dark ink (the pink card already says overdue) (2026-11-08) */
+.today-meta .meta-line .ml-date.late{color:var(--ink)}

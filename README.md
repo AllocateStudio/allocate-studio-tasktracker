@@ -293,3 +293,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - The editor's Project field is now a `<select>` of `projects()` (new tasks default to Personal) with a last option "+ Add new project…" (value `__new__`). Typing a brand new project name in the editor is no longer possible; new projects are added in Settings.
 - Choosing "+ Add new project…" closes the editor and opens Settings with the Projects add form open and focused. If a task name was already typed, it asks first ("Leave this task without saving…"); Cancel puts the previous project back and keeps the editor open.
 - Safety: the save handler maps a stray `__new__` to Personal. No CSS change.
+
+### 2026-11-08: Today card: overdue date no longer red (edited in Claude Code)
+
+- In the Today card the overdue date stays dark ink, since the pink card already marks it overdue (`.today-meta .meta-line .ml-date.late{color:var(--ink)}`). Your tasks keeps the dark red overdue date. index.html CSS version `20261108-today-date-ink`.
