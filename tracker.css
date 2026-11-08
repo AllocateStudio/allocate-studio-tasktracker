@@ -133,3 +133,9 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(max-width:700px){.task-row{grid-template-columns:26px 1fr}.task-row .resched-phone{display:block}.task-row>.date{display:none}}
 /* Your tasks: spread the columns so there is no big gap between the title and Priority (2026-11-07) */
 @media(min-width:701px){.task-row,.task-head{grid-template-columns:30px minmax(180px,2.4fr) 1fr 1.3fr 1fr}}
+/* Settings: two-column cards, Sunday|Monday switch, remove samples, delete all (2026-11-07) */
+.settings-grid{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.settings-grid .actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn.danger{background:#fff;color:#922f46;border-color:#922f46}
+@media(hover:hover){.btn.danger:hover{background:var(--blush);color:var(--ink);border-color:var(--ink)}}
+@media(max-width:700px){.settings-grid{grid-template-columns:1fr}}
