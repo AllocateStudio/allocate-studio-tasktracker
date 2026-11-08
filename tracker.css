@@ -142,3 +142,13 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 /* Today: soft colour change when a task is ticked before it slides down (2026-11-07) */
 .today-item .today-open,.today-item .check{transition:background-color .25s ease,border-color .25s ease,color .25s ease}
 .today-item.moving{position:relative;z-index:2}
+/* Settings: Projects card (2026-11-07) */
+.projects-panel{grid-column:1/-1}
+.project-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.project-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);min-height:56px}
+.project-name{font-weight:700;flex:1;min-width:0;overflow-wrap:anywhere}
+.project-count{font-size:13px;color:var(--ink-soft);min-width:70px;text-align:right;margin-right:6px}
+.project-note{font-size:12px;color:var(--ink-soft);min-width:166px;text-align:center}
+.project-row .btn{min-height:36px;padding:7px 12px;font-size:13px}
+.project-row.editing input{flex:1;min-width:0;font-size:14px;padding:8px 10px;min-height:38px}
+@media(max-width:700px){.project-row{flex-wrap:wrap}.project-name{flex:1 1 60%}.project-note{min-width:0}}

@@ -206,3 +206,12 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - Owner asked for a shorter pause: the ticked task now waits 0.33s (was 0.55s) before sliding down. `setTimeout` in `todayToggle()`.
 - Then shortened again to 0.25s at the owner's request.
+
+### 2026-11-07: Projects in Settings (edited in Claude Code)
+
+- New full-width **Projects** card at the bottom of Settings: every project with its task count, plus Rename and Delete. Personal is the default and can't be renamed or deleted (tasks with no project show as Personal).
+- **Rename** opens an inline field (Enter saves, Escape cancels). Renaming to an existing name (case-insensitive, e.g. "Wrok" → "work") asks to merge and moves the tasks into the existing project. The project filter follows a rename.
+- **Delete** asks first and moves the project's tasks to Personal.
+- Data: two optional fields on `data`: `removedProjects` (hides deleted built-ins Work/Home) and `extraProjects` (keeps a renamed project that has no tasks yet). `projects()` reads both. Older data and backups without them still work; `valid()` ignores extra fields.
+- Settings order: Calendar | Backup, Sample tasks | Delete all, Projects.
+- Checked in the browser: typo merge, rename, delete, Escape cancels, filter options update, no console errors. Backup: `work/app-before-projects.js`. index.html CSS version `20261107-projects`.
