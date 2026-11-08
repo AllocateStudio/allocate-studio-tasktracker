@@ -131,3 +131,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .task-row>.date .resched-menu{left:0;right:auto}
 .task-row .resched-phone{display:none}
 @media(max-width:700px){.task-row{grid-template-columns:26px 1fr}.task-row .resched-phone{display:block}.task-row>.date{display:none}}
+/* Your tasks: spread the columns so there is no big gap between the title and Priority (2026-11-07) */
+@media(min-width:701px){.task-row,.task-head{grid-template-columns:30px minmax(180px,2.4fr) 1fr 1.3fr 1fr}}

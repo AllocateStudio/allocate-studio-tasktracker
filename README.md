@@ -183,3 +183,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Due date is optional again (edited in Claude Code)
 
 - Owner's call: the Due date field in the editor is no longer required. Clear it to save a task with no date; such tasks go to the end of Your tasks as "No date" (see previous entry). A repeating task still needs a date: saving Repeat ≠ None with an empty date shows "Choose a date for a repeating task".
+
+### 2026-11-07: Your tasks columns spread out (edited in Claude Code)
+
+- On desktop the title column took all spare width, leaving a big gap before Priority. Columns are now `30px minmax(180px,2.4fr) 1fr 1.3fr 1fr`, so the spare width is shared between Priority, Due date and Status. Phones unchanged. index.html CSS version `20261107-columns`.
