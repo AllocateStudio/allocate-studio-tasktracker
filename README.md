@@ -140,3 +140,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Bare reschedule icon in Calendar Week too (edited in Claude Code)
 
 - The Calendar Week list (`.week-task-body`) now uses the same bare black reschedule icon as Today (no frame, 19px, black square only while the menu is open). Your tasks keeps the white framed button. index.html CSS version `20261107-week-resched-bare`.
+
+### 2026-11-07: Clicking outside the reschedule menu only closes it (edited in Claude Code)
+
+- Before, closing the open reschedule menu by clicking elsewhere also triggered whatever was under the click (often opening another task's editor). Now, while a menu is open, a click outside it only closes the menu (`preventDefault`, then stop). The next click works as usual. Clicking another task's reschedule icon still switches straight to that menu. Change is at the start of the delegated click handler in app.js. Backup: `work/app-before-resched-outside-click.js`.
