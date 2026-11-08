@@ -226,3 +226,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - On phones (≤700px) Tasks / Calendar / Settings move to a bar fixed at the bottom of the screen, full width, split into three equal tabs, each with an icon over the label (Lucide list-checks, calendar-days, settings; same icons and sizes as Bill Calendar's tab bar). Active tab: lime with an ink border. White bar with a top border and soft shadow, safe-area padding for iPhones. `#app` gets bottom padding so content never sits under it; the toast moves above the bar.
 - Code: `tabIcons` in app.js, nav buttons now hold `.tab-icon` + `.tab-label`. Icons are hidden on desktop, where the nav looks as before.
 - Checked in the iPhone simulator: bar renders, switching tabs works. Backup: `work/app-before-bottom-nav.js`. index.html CSS version `20261107-bottom-nav`.
+
+### 2026-11-07: Phone header: Add task next to the title (edited in Claude Code)
+
+- Replaces the "Add task on top, full width" layout from earlier today. On phones the header is a grid: title on the left, a normal-size "＋ Add task" on the right (not stretched), and the month or week picker full width underneath. In Week view the Today button sits on its own row under the picker. Desktop unchanged. index.html CSS version `20261107-add-right`.
