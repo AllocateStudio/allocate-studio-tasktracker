@@ -220,3 +220,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: Phone header: Add task on top, month picker full width (edited in Claude Code)
 
 - On phones (≤700px) the header actions stack: "＋ Add task" first (full width, `order:-1`), then the month picker stretched to the full width with the month centred. The Week view gets the same Add task on top; its week picker was already full width. Desktop unchanged. index.html CSS version `20261107-month-full2`.
+
+### 2026-11-07: Phone bottom tab bar, like Bill Calendar (edited in Claude Code)
+
+- On phones (≤700px) Tasks / Calendar / Settings move to a bar fixed at the bottom of the screen, full width, split into three equal tabs, each with an icon over the label (Lucide list-checks, calendar-days, settings; same icons and sizes as Bill Calendar's tab bar). Active tab: lime with an ink border. White bar with a top border and soft shadow, safe-area padding for iPhones. `#app` gets bottom padding so content never sits under it; the toast moves above the bar.
+- Code: `tabIcons` in app.js, nav buttons now hold `.tab-icon` + `.tab-label`. Icons are hidden on desktop, where the nav looks as before.
+- Checked in the iPhone simulator: bar renders, switching tabs works. Backup: `work/app-before-bottom-nav.js`. index.html CSS version `20261107-bottom-nav`.

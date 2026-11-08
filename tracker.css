@@ -154,3 +154,14 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(max-width:700px){.project-row{flex-wrap:wrap}.project-name{flex:1 1 60%}.project-note{min-width:0}}
 /* Phone: Add task on top, month picker full width below it (2026-11-07) */
 @media(max-width:700px){.heading .actions{flex-wrap:wrap;width:100%}.heading .actions .mp-picker{flex:1 1 100%;display:flex}.heading .actions .mp-picker .mp-trigger{flex:1;justify-content:center}.heading .actions>[data-add]{flex:1 1 100%;order:-1}}
+/* Phone: bottom tab bar like Bill Calendar, full width, icon + label (2026-11-07) */
+.tab-icon{display:none}
+@media(max-width:700px){
+  #app{padding-bottom:110px}
+  #navigation{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;flex-wrap:nowrap;gap:8px;margin:0;background:#fff;border:0;border-top:2px solid var(--ink);box-shadow:0 -4px 14px rgba(20,21,26,.12);padding:10px 14px max(10px,env(safe-area-inset-bottom))}
+  #navigation .nav-item{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 4px;border-radius:12px;border:2px solid transparent;box-shadow:none;min-height:0}
+  #navigation .nav-item.active{background:var(--accent);border-color:var(--ink)}
+  .tab-icon{display:block;width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .tab-label{font-size:12px;font-weight:700}
+  #toast{bottom:calc(96px + env(safe-area-inset-bottom))}
+}
