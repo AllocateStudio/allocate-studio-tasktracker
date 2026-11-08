@@ -331,3 +331,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-08: Settings Projects: task counts aligned (edited in Claude Code)
 
 - Rename/Delete buttons and Personal's "Default" now sit in one fixed-width slot `.project-actions` (170px on desktop), so the "N tasks" counts line up in every row. Phones keep the wrapped layout with counts aligned right. index.html CSS version `20261108-project-align`.
+
+### 2026-11-08: Settings cards in one row have equal height (edited in Claude Code)
+
+- `.settings-grid{align-items:stretch}` (was `start`), so Backup & restore and Sample tasks are always the same height, even when Sample tasks' buttons wrap to two lines on narrower screens. index.html CSS version `20261108-settings-equal`.

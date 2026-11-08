@@ -260,3 +260,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .project-actions .project-note{flex:1;text-align:center;min-width:0}
 .project-count{flex:0 0 auto;text-align:right}
 @media(max-width:700px){.project-actions{flex:0 0 auto;margin-left:auto}.project-actions .project-note{flex:0 0 auto}}
+/* Settings: cards in the same row stretch to equal height (Backup & restore next to Sample tasks) (2026-11-08) */
+.settings-grid{align-items:stretch}
