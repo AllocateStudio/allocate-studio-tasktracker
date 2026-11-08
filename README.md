@@ -268,3 +268,8 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-08: Your tasks phone meta line: no calendar icon before the date (edited in Claude Code)
 
 - Removed the small calendar icon in front of the date (the reschedule button on the right already uses a calendar). Deleted the unused `metaCal` constant in app.js and the `.meta-line .ml-ico` rule in tracker.css. The date stays bold, dark red when overdue. index.html CSS version `20261108-no-date-icon`.
+
+### 2026-11-08: Today card uses the Your tasks meta line (edited in Claude Code)
+
+- Owner asked for Today to match Your tasks. `todayCard()` now uses `metaLine()`: date (bold; dark red when overdue, "Today" when due today, "Completed" when done), coloured priority dot, project, plus "In progress" when relevant. The card colour already says overdue, so the date has no "Was due" prefix and the line stays on one row.
+- Removed the now-unused `short()` in `todayCard()`. Added `.today-meta{opacity:1}` and a 2px top margin at the end of tracker.css. Calendar Week is unchanged. index.html CSS version `20261108-today-meta`.
