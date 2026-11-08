@@ -150,3 +150,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - The whole row in Your tasks now opens the editor (`.task-row[data-edit]`, role=button, tabindex=0; Enter or Space works too), same as Today and Week. The three-dots `.edit` button is removed and so is its empty header column. The checkbox and the reschedule icon still do their own thing and do not open the editor. On desktop the title underlines on hover.
 - The Due date column shows the full month ("November 7" instead of "Nov 7"); the column is 130px wide now.
 - Grid is `30px 1fr 100px 130px 115px` (phone `26px 1fr`). Backup: `work/app-before-row-click.js`. index.html CSS version `20261107-row-click`.
+
+### 2026-11-07: No hover underline in Your tasks (edited in Claude Code)
+
+- The owner did not like the title underline on row hover, so it is removed. Rows still show a pointer cursor and open the editor on click. index.html CSS version `20261107-no-underline`.
