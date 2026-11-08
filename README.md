@@ -323,3 +323,7 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - New `ask(message, okLabel, danger)` in app.js shows a small modal `<dialog id="ask">` (Cancel + action button, Cancel focused, Escape = Cancel) and returns a Promise<boolean>. It replaces every `confirm()`: delete all tasks, remove sample tasks, delete task, delete project, merge on rename, leave the editor to add a project, replace on backup import. `renameProject` and `deleteProject` are now async.
 - Delete all and Remove sample tasks re-render Settings afterwards. The invalid-backup `alert()` is now a toast; the rare storage-error `alert()` in `save()` is unchanged.
 - `.ask-dialog` styles at the end of tracker.css. index.html CSS version `20261108-ask-dialog`.
+
+### 2026-11-08: Repeat hint removed (edited in Claude Code)
+
+- Owner asked to drop the "The next task is created when you complete this one." line under Repeat entirely. Repeating still works the same (completing a repeating task creates the next one). Removed the hint span and its change handler from app.js; `.field-hint[hidden]` CSS is now unused but harmless.
