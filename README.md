@@ -158,3 +158,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 ### 2026-11-07: No duplicated date and priority in Your tasks (edited in Claude Code)
 
 - On desktop the row meta line under the title shows only the project; date and priority already have their own columns. On phones (≤700px) those columns are hidden, so the meta line still shows "Project · November 3 · Medium priority" via `.meta-phone` (now with the full month instead of 2026-11-03). Backup: `work/app-before-meta-dedupe.js`. index.html CSS version `20261107-meta-dedupe`.
+
+### 2026-11-07: Reschedule icon next to the due date in Your tasks (edited in Claude Code)
+
+- On desktop the reschedule icon in Your tasks now sits right after the date in the Due date column (bare black icon like Today and Week, menu opens under it, left-aligned). It used to float at the right edge of the title column and looked tied to Priority.
+- `row()` renders `quickMove(t)` twice: inside `.date` (desktop) and inside `.resched-phone` in `.task-main` (phones, where the date column is hidden). CSS shows one or the other at 700px. Due date column is 150px.
+- Backup: `work/app-before-resched-by-date.js`. index.html CSS version `20261107-resched-by-date2`.

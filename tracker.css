@@ -131,3 +131,13 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(max-width:700px){.task-row{grid-template-columns:26px 1fr}}
 /* Your tasks: date and priority only in their columns on desktop; phones (no columns) keep them in the meta line (2026-11-07) */
 @media(min-width:701px){.task-row .meta-phone{display:none}}
+/* Your tasks: reschedule icon sits right after the due date (desktop); phones keep it at the row's right edge (2026-11-07) */
+.task-row,.task-head{grid-template-columns:30px minmax(100px,1fr) 100px 150px 115px}
+.task-row>.date{display:flex;align-items:center;gap:6px}
+.task-row>.date .resched{position:relative;right:auto;top:auto;transform:none}
+.task-row>.date .resched-btn{width:26px;height:26px;background:transparent;border-color:transparent;color:var(--ink)}
+.task-row>.date .resched-btn svg{width:18px;height:18px;stroke-width:2}
+.task-row>.date .resched.open .resched-btn{background:var(--ink);border-color:var(--ink);color:#fff}
+.task-row>.date .resched-menu{left:0;right:auto}
+.task-row .resched-phone{display:none}
+@media(max-width:700px){.task-row{grid-template-columns:26px 1fr}.task-row .resched-phone{display:block}.task-row>.date{display:none}}
