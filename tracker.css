@@ -193,7 +193,7 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 /* Your tasks: soft colour change on tick before the row slides down (2026-11-07) */
 .task-row .check,.task-row .task-title{transition:background-color .25s ease,border-color .25s ease,color .25s ease}
 .task-row.moving{position:relative;z-index:2;background:var(--card,#fff)}
-/* One meta line style everywhere: bold date with icon, coloured priority dot, project in grey (2026-11-07) */
+/* Your tasks meta line: bold date with icon, coloured priority dot, project in grey (2026-11-07) */
 .meta-line{display:inline-flex;flex-wrap:wrap;align-items:center;gap:3px 12px;font-size:12.5px;color:var(--ink-soft);opacity:1}
 .meta-line .ml-date{display:inline-flex;align-items:center;gap:4px;color:var(--ink);font-weight:600}
 .meta-line .ml-date.late{color:#922f46}
@@ -203,7 +203,5 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .meta-line .pr-High i{background:#e0457b}
 .meta-line .pr-Medium i{background:#f2c94c}
 .meta-line .pr-Low i{background:#9fc0f0}
-.today-meta,.week-task-meta{opacity:1}
-.today-meta .meta-line,.week-task-meta .meta-line{margin-top:2px}
 .task-row .meta-phone{display:none}
 @media(max-width:700px){.task-row .meta-phone{display:block;margin-top:3px}.task-row .meta-desk{display:none}}
