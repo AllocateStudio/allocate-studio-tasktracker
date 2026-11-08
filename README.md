@@ -316,3 +316,10 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - The Overdue summary card counts every overdue open task, not only the selected month or week, so it matches the Today card. Total / In progress / Completed still follow the selected month or week.
 - Calendar Week rows and the phone day panel use `metaLine(t,{date:false})`: priority dot, project, "In progress" when relevant (the day is the heading and the row colour shows overdue, so no date or "Overdue" text). `.week-task-meta{opacity:1}` and spacing at the end of tracker.css. index.html CSS version `20261108-leftovers`.
 - Owner decision: no "In progress" text in Today or Calendar Week; the card colour carries the status everywhere there. Your tasks keeps its status pill / column.
+
+### 2026-11-08: In-app confirm dialog instead of the browser confirm() (edited in Claude Code)
+
+- Bug: "Delete all tasks" seemed to do nothing. The code worked, but it relied on the browser's `confirm()`, which some in-app/embedded browsers block silently (it returns false, so nothing happens). The Settings page also did not re-render, so project counts looked unchanged.
+- New `ask(message, okLabel, danger)` in app.js shows a small modal `<dialog id="ask">` (Cancel + action button, Cancel focused, Escape = Cancel) and returns a Promise<boolean>. It replaces every `confirm()`: delete all tasks, remove sample tasks, delete task, delete project, merge on rename, leave the editor to add a project, replace on backup import. `renameProject` and `deleteProject` are now async.
+- Delete all and Remove sample tasks re-render Settings afterwards. The invalid-backup `alert()` is now a toast; the rare storage-error `alert()` in `save()` is unchanged.
+- `.ask-dialog` styles at the end of tracker.css. index.html CSS version `20261108-ask-dialog`.
