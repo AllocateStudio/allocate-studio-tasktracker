@@ -309,3 +309,9 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 
 - New `priDot(priority, suffix)` helper in app.js renders `<span class="pri-dot pr-X"><i></i>X…</span>`. Used in Calendar Week rows and the phone day panel ("Home · ● Medium priority · In progress") and the calendar cell week meta. Your tasks (desktop column and phone line) and Today already had dots. The filter and editor dropdowns stay plain text (native selects can't show dots).
 - `.pri-dot` styles at the end of tracker.css, same colours as elsewhere. index.html CSS version `20261108-pri-dots-all`.
+
+### 2026-11-08: Leftovers: repeat hint, Overdue card, Week meta line (edited in Claude Code)
+
+- Task editor: the "The next task is created when you complete this one." hint under Repeat shows only when a repeat is chosen (hidden for None, toggles live on change via `data-repeat-select` / `.repeat-hint`).
+- The Overdue summary card counts every overdue open task, not only the selected month or week, so it matches the Today card. Total / In progress / Completed still follow the selected month or week.
+- Calendar Week rows and the phone day panel use `metaLine(t,{date:false})`: priority dot, project, "In progress" when relevant (the day is the heading and the row colour shows overdue, so no date or "Overdue" text). `.week-task-meta{opacity:1}` and spacing at the end of tracker.css. index.html CSS version `20261108-leftovers`.

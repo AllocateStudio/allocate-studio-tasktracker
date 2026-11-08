@@ -247,3 +247,7 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .pri-dot.pr-High i{background:#e0457b}
 .pri-dot.pr-Medium i{background:#f2c94c}
 .pri-dot.pr-Low i{background:#9fc0f0}
+/* Calendar Week rows and phone day panel use the Your tasks meta line (priority dot, project, In progress); repeat hint hidden when Repeat is None (2026-11-08) */
+.week-task-meta{opacity:1}
+.week-task-meta .meta-line{margin-top:2px}
+.field-hint[hidden]{display:none}
