@@ -1,0 +1,65 @@
+/* Buyer guide pages (Etsy PDFs). Printed to PDF by build-customer-zip.py with headless Chrome. */
+@font-face{font-family:'Plus Jakarta Sans';src:url('../assets/fonts/PlusJakartaSans-800.woff2') format('woff2');font-weight:800}
+@font-face{font-family:'Plus Jakarta Sans';src:url('../assets/fonts/PlusJakartaSans-700.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'DM Sans';src:url('../assets/fonts/DM-Sans.ttf') format('truetype');font-weight:100 1000}
+@page{size:8.5in 11in;margin:0}
+:root{--ink:#14151a;--soft:#3d3e46;--paper:#f7f6f0;--lime:#d6f25c;--pink:#f2b6d4;--sky:#dfe9fb;--mint:#dceecb;--lilac:#e6def7;--butter:#fcefc0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper)}
+body{font:400 10.5pt/1.45 'DM Sans',Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;padding:.5in .6in .45in;position:relative;overflow:hidden;display:flex;flex-direction:column;
+  background-color:var(--paper);background-image:linear-gradient(#14151a0d 1px,transparent 1px),linear-gradient(90deg,#14151a0d 1px,transparent 1px);background-size:24px 24px;break-after:page}
+.page:last-child{break-after:auto}
+header{display:flex;align-items:center;gap:14px;padding-bottom:16px;border-bottom:2.5px solid var(--ink);margin-bottom:18px}
+header img{height:36px;width:auto;display:block}
+header .bar{width:2px;height:22px;background:var(--ink)}
+header .product,header .label{font:700 9pt 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+header .label{margin-left:auto}
+h1{font:800 29pt/1.05 'Plus Jakarta Sans',sans-serif;letter-spacing:-.045em;margin-bottom:14px}
+h1.big{font-size:40pt;margin-bottom:16px}
+h2{font:800 15pt/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.035em;margin:0 0 8px}
+h3{font:700 11.5pt 'DM Sans',sans-serif;margin-bottom:8px}
+p{margin-bottom:9px}
+p:last-child{margin-bottom:0}
+b{font-weight:700}
+a{color:inherit;font-weight:700}
+.card{border:2px solid var(--ink);border-radius:18px;box-shadow:4px 5px 0 var(--ink);padding:14px 20px;margin-bottom:14px;background:#fff}
+.lime{background:var(--lime)}.pink{background:var(--pink)}.sky{background:var(--sky)}.mint{background:var(--mint)}.lilac{background:var(--lilac)}.butter{background:var(--butter)}
+.kicker{font:700 8.5pt 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.card-head .kicker{margin:0}
+/* */.btn-open{display:inline-flex;align-items:center;gap:14px;background:var(--ink);color:#fff;text-decoration:none;font:700 12.5pt 'DM Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:12px 28px;border-radius:999px;margin:4px 0 12px}
+.note{background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;padding:10px 14px;margin-bottom:12px}
+.arrows{list-style:none;margin:6px 0 10px}
+.arrows li{position:relative;padding-left:26px;margin-bottom:6px}
+.arrows li::before{content:'→';position:absolute;left:0}
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;position:relative;padding-left:40px;min-height:28px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:26px;height:26px;border:2px solid var(--ink);border-radius:50%;background:#fff;display:grid;place-items:center;font:700 10pt 'DM Sans',sans-serif}
+.steps.two{grid-template-columns:1fr 1fr;column-gap:24px}
+.steps.three{grid-template-columns:repeat(3,1fr);column-gap:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin-bottom:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.grid2 .card,.grid3 .card{margin:0}
+.num-card{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:13px 16px}
+.num-card .n{width:28px;height:28px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:700 10.5pt 'DM Sans',sans-serif}
+.span2{grid-column:1/-1}
+.small-steps{list-style:none;counter-reset:s}
+.small-steps li{counter-increment:s;position:relative;padding-left:20px;margin-bottom:5px}
+.small-steps li::before{content:counter(s);font-weight:700;position:absolute;left:0}
+.dots{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;margin:6px 0 10px}
+.dots li{position:relative;padding-left:16px;font-weight:700}
+.dots li::before{content:'·';position:absolute;left:2px}
+.section{margin-bottom:14px}
+footer{margin-top:auto;border-top:2.5px solid var(--ink);padding-top:16px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+footer .q{font:800 20pt 'Plus Jakarta Sans',sans-serif;letter-spacing:-.04em}
+footer .sign{font:800 17pt/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.035em;text-align:right}
+footer small{font-size:10.5pt}
+
+/* Fit tweaks */
+header img{height:34px}
+.welcome h1.big{margin-bottom:12px}
+.welcome .grid2{gap:12px 14px;margin-bottom:14px}
+.welcome footer{padding-top:12px}
+.welcome footer .sign{font-size:15pt}
+.page .card.mint .steps.three{margin:8px 0}
