@@ -345,3 +345,5 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - 2026-11-09: Published to GitHub: `https://github.com/AllocateStudio/allocate-studio-tasktracker` (public, branch `main`). Commit author rewritten for all earlier commits to `Allocate Studio <hello.allocatestudio@gmail.com>` before the first push, and this repo's local git config now uses the same name and email. A bundle of the history before the rewrite is in `tht/work/task-tracker-before-author-rewrite-2026-11-09.bundle`. GitHub Pages serves `main`, root: `https://allocatestudio.github.io/allocate-studio-tasktracker/`. Codex: if you have an older clone, re-clone or `git fetch && git reset --hard origin/main` (commit hashes changed).
 
 - 2026-11-09: Save status text no longer uses em-dashes: "Storage unavailable. Export a backup" and "Not saved. Export a backup" (house style, and the buyer guide quotes these).
+
+- 2026-11-09: Home screen icon fixed. `assets/icon-180.png`, `icon-192.png` and `icon-512.png` still showed the Budget Planner icon ("Budget / ALLOCATE"). They now say "Tasks / ALLOCATE" in the same lime and ink style (Plus Jakarta Sans and DM Sans).
