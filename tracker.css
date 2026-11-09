@@ -262,3 +262,7 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 @media(max-width:700px){.project-actions{flex:0 0 auto;margin-left:auto}.project-actions .project-note{flex:0 0 auto}}
 /* Settings: cards in the same row stretch to equal height (Backup & restore next to Sample tasks) (2026-11-08) */
 .settings-grid{align-items:stretch}
+/* Sticky page heading: title, month picker and Add task stay on top while scrolling (2026-11-09) */
+.heading{position:sticky;top:0;z-index:30;background:var(--bg);margin:18px -32px 12px;padding:12px 32px;transition:box-shadow .15s}
+.heading.stuck{box-shadow:0 1px 0 var(--line),0 6px 12px -10px #14151a40}
+@media(max-width:700px){.heading{margin:6px -16px 10px;padding:10px 16px}}

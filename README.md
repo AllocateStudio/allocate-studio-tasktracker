@@ -337,3 +337,5 @@ This folder is a git repository. Run `git log` and `git diff HEAD~1` to see each
 - `.settings-grid{align-items:stretch}` (was `start`), so Backup & restore and Sample tasks are always the same height, even when Sample tasks' buttons wrap to two lines on narrower screens. index.html CSS version `20261108-settings-equal`.
 
 - 2026-11-09: Settings, Sample tasks card: button labels shortened to "Add samples" and "Remove samples" so both buttons fit on one row, level with the Export/Import buttons in Backup & restore.
+
+- 2026-11-09: Sticky page heading. The title (Task tracker / Task calendar / Settings), the month picker or week controls and the "+ Add task" button stay pinned to the top while scrolling, on desktop and phone. The heading gets a solid page background, and a thin line with a soft shadow appears once it is stuck (`.heading.stuck`, toggled by a scroll listener at the end of app.js). CSS version bumped to `20261109-sticky-heading`.

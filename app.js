@@ -123,4 +123,6 @@ document.addEventListener('change',async e=>{const el=e.target;if(el.name==='pro
 
 if(!storageError&&data.sampleDataVersion!==1){addSampleTasks();save();}
 render();
+
+window.addEventListener('scroll',()=>{const h=document.querySelector('.heading');if(h)h.classList.toggle('stuck',h.getBoundingClientRect().top<=0&&window.scrollY>0);},{passive:true});
 })();
