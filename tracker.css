@@ -266,3 +266,12 @@ body,.wordmark small{font-family:'DM Sans',Arial,sans-serif}
 .heading{position:sticky;top:0;z-index:30;background:var(--bg);margin:18px -32px 12px;padding:12px 32px;transition:box-shadow .15s}
 .heading.stuck{box-shadow:0 1px 0 var(--line),0 6px 12px -10px #14151a40}
 @media(max-width:700px){.heading{margin:6px -16px 10px;padding:10px 16px}}
+/* Phone: month picker / week controls sit below the sticky heading and scroll away (2026-11-09) */
+.head-tools-mobile{display:none}
+@media(max-width:700px){
+  .head-tools-mobile{display:grid;row-gap:14px;margin:0 0 20px}
+  .head-tools-mobile .mp-picker,.head-tools-mobile .week-nav-picker{display:flex;width:100%}
+  .head-tools-mobile .mp-picker .mp-trigger{flex:1;justify-content:center}
+  .head-tools-mobile .week-controls{display:contents}
+  .head-tools-mobile [data-week-today]{justify-self:start}
+}
